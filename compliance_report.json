@@ -1,0 +1,162 @@
+{
+  "timestamp": "2026-07-18T09:40:15.619890",
+  "total": 20,
+  "compliant": 12,
+  "partial": 8,
+  "missing": 0,
+  "compliance_rate": 60.0,
+  "details": [
+    {
+      "id": "P01",
+      "name": "龙头回避",
+      "description": "板块#1-2跳过，选#3-5轮动",
+      "status": "⚠️",
+      "note": "模式未在 us_screener.py 中找到"
+    },
+    {
+      "id": "P02",
+      "name": "7天止损黑名单",
+      "description": "止损后7天不重买",
+      "status": "✅",
+      "file": "us_trader.py",
+      "matched_pattern": "recent_stops"
+    },
+    {
+      "id": "P03",
+      "name": "财报≤5天不建仓",
+      "description": "财报临近不建新仓",
+      "status": "⚠️",
+      "note": "模式未在 us_screener.py 中找到"
+    },
+    {
+      "id": "P04",
+      "name": "动态凯利仓位",
+      "description": "每只标的仓位根据score和ATR动态计算",
+      "status": "⚠️",
+      "note": "模式未在 us_screener.py 中找到"
+    },
+    {
+      "id": "P05",
+      "name": "波动率分档止损",
+      "description": "根据20日波动率分7-10%四档",
+      "status": "✅",
+      "file": "us_common.py",
+      "matched_pattern": "get_volatility_stop_pct"
+    },
+    {
+      "id": "P06",
+      "name": "回撤>12%停买",
+      "description": "账户回撤超过12%暂停买入",
+      "status": "✅",
+      "file": "us_trader.py",
+      "matched_pattern": "DRAWDOWN_PAUSE.*0\\.12"
+    },
+    {
+      "id": "P07",
+      "name": "回撤>20%减半仓",
+      "description": "账户回撤超过20%强制减半",
+      "status": "✅",
+      "file": "us_trader.py",
+      "matched_pattern": "DRAWDOWN_CUT.*0\\.20"
+    },
+    {
+      "id": "P08",
+      "name": "阶梯止盈 +20%/+35%",
+      "description": "盈利20%卖1/3，35%再卖1/3",
+      "status": "✅",
+      "file": "us_trader.py",
+      "matched_pattern": "take_profit"
+    },
+    {
+      "id": "P09",
+      "name": "MACD金叉/死叉",
+      "description": "MACD信号加入评分",
+      "status": "✅",
+      "file": "us_common.py",
+      "matched_pattern": "calc_macd"
+    },
+    {
+      "id": "P10",
+      "name": "RS vs SPY相对强度",
+      "description": "区分真涨和随大盘涨",
+      "status": "⚠️",
+      "note": "模式未在 us_screener.py 中找到"
+    },
+    {
+      "id": "P11",
+      "name": "成交量确认",
+      "description": "放量上涨+3/缩量虚涨-3",
+      "status": "✅",
+      "file": "us_common.py",
+      "matched_pattern": "calc_volume_metrics"
+    },
+    {
+      "id": "P12",
+      "name": "板块缺配加分",
+      "description": "缺配板块的标的评分加权",
+      "status": "⚠️",
+      "note": "模式未在 us_screener.py 中找到"
+    },
+    {
+      "id": "P13",
+      "name": "事件→板块映射",
+      "description": "市场事件利好/利空映射到板块",
+      "status": "⚠️",
+      "note": "模式未在 us_screener.py 中找到"
+    },
+    {
+      "id": "P14",
+      "name": "sell→buy配对",
+      "description": "卖出后必须有对应的买入",
+      "status": "✅",
+      "file": "us_trader.py",
+      "matched_pattern": "log_sell_for_replacement"
+    },
+    {
+      "id": "P15",
+      "name": "止损后1h替代买入",
+      "description": "止损触发后1小时内必须有替代",
+      "status": "✅",
+      "file": "us_trader.py",
+      "matched_pattern": "check_pending_replacements"
+    },
+    {
+      "id": "P16",
+      "name": "FOMC日不做操作",
+      "description": "FOMC当天不做任何操作",
+      "status": "✅",
+      "file": "market_env.py",
+      "matched_pattern": "fomc"
+    },
+    {
+      "id": "P17",
+      "name": "参数自校准",
+      "description": "参数从实际交易数据中自动校准",
+      "status": "✅",
+      "file": "calibrator.py",
+      "matched_pattern": "calibrated_params"
+    },
+    {
+      "id": "P18",
+      "name": "市场状态检测",
+      "description": "自动检测trending/volatile/crisis/quiet",
+      "status": "✅",
+      "file": "calibrator.py",
+      "matched_pattern": "detect_regime"
+    },
+    {
+      "id": "P19",
+      "name": "30%仓位门槛→市价单",
+      "description": "仓位低时用市价单不纠结",
+      "status": "⚠️",
+      "note": "模式未在 us_trader.py 中找到"
+    },
+    {
+      "id": "P20",
+      "name": "板块龙头标👑不过度集中",
+      "description": "保留的标的不全是板块龙头",
+      "status": "⚠️",
+      "note": "模式未在 us_screener.py 中找到"
+    }
+  ]
+}

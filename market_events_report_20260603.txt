@@ -1,0 +1,192 @@
+# 市场事件监控报告 — 2026-06-03 (BJT)
+
+**扫描类型**: 全 5 板块 + 6 EN + 4 ZH 双源 = 10 queries · cross-validated
+**数据源**: Google News RSS (en-US / zh-CN) + Yahoo Finance 8 (1d 5d) + Sina hq.sinajs.cn (HK 指数)
+**持仓范围**: 美股 Alpaca 25 只 watchlist · 现金 ~85% · 阶梯止盈 20/35% + 移动止损 5%
+
+---
+
+## 🔥 突发信号 (Breaking Alerts)
+
+### 🔥 Fed Chair Warsh 首批人事含 Project 2025 作者 — 独立性 + 政治化风险骤升  (2026-06-02)
+- **来源**: CNBC / WSJ / ABC News 三源
+- **影响**: 长端利率上行压力 → KO/PEP/WMT/COST 防守股承压；金融股短期未必受益（curve uncertainty）
+
+### 🔥 特斯拉 6/2 官宣"监督版FSD登陆中国"  (2026-06-02)
+- **来源**: 21财经 + 新浪 同日报道
+- **影响**: 利好 TSLA（6/2 实际涨 1.89%）；中国智驾赛道压力上升
+
+### 🔥 英伟达上季营收 $816 亿超预期，Vera Rubin 下半年发货  (2026-05-18)
+- **来源**: 新浪财经 + WSJ中文 + Moomoo + 雪球
+- **影响**: NVDA 基本面硬核（6/2 close 222.82 浮亏 -2.1% from cost 227.63 — 接近止损线 216.25）
+
+### 🔥 钨价飙涨 6x 冲击美国制造商  (2026-05-25/29)
+- **来源**: marketplace + InvestorNews + CrudeOilPrices + Washington Post
+- **影响**: AMAT 成本端承压；6/2 反向涨 6.96%（板块情绪盖过基本面）— 短线需警惕回调
+
+---
+
+## 一、半导体 / AI 板块 (NVDA, TSM, QCOM, AMD, AMAT)
+
+### 英文源 (Google News RSS)
+- **Taiwan Semiconductor Stock Nearing 52-Week High: Buy, Sell or Hold?** — 24/7 Wall St. | Tue, 19 May 2026
+- **NVDA Gains 23.5% Since April, TSM Up 19.7%: What's Driving the Rally?** — TradingView | Fri, 10 Apr 2026
+- **Will AI-Driven Chip Demand Help TSM Meet 2026 Revenue Growth Goal?** — Zacks Investment Research | Sun, 12 Apr 2026
+
+### 中文源 (Google News zh-CN)
+- **博通财报前瞻：不只是AI芯片成绩单，而是华尔街对“英伟达之外第二条主线”的压力测试** — 雪球 | Wed, 20 May 2026
+- **英伟达财报后芯片股的反应：AI势头减弱，还是资本支出转向超大规模数据中心？** — Moomoo | Thu, 21 May 2026
+- **芯片热潮进入震荡期，英伟达财报成市场焦点** — 华尔街日报中文网 | Thu, 26 Feb 2026
+
+**影响方向**: 🟢 利好（AI 算力需求硬核，Vera Rubin 下半年发货）
+**交叉验证**: TradingView + Zacks + Bernstein + 新浪 + WSJ中文 ≥5 源
+**行情**: NVDA $222.82 (-0.69%), AMD $521.54 (+2.24%), TSM $446.69 (+2.54%), AMAT $490.05 (+6.96%)
+
+## 二、地缘 / 台海风险 (TSM 重仓关注)
+
+### 英文源 (Google News RSS)
+- **Taiwan Strait Tensions Push Countries to Diversify Semiconductor Supply Chains** — thehilltoponline.com | Thu, 14 May 2026
+- **TSM: Taiwan's TSMC Faces Risks Amid Rising Tensions with China** — GuruFocus | Fri, 13 Mar 2026
+- **Geopolitical Tension Puts TSMC Valuation And Supply Chain Resilience In Focus** — Yahoo Finance | Sun, 22 Mar 2026
+
+**影响方向**: 🔴 长期利空 (尾部风险) / 🟢 短期反弹
+**交叉验证**: thehilltoponline + GuruFocus + Yahoo Finance + Anadolu Ajansı ≥4 源
+**行情**: TSM $446.69 (+2.54%) — 资金反而看多地缘风险缓解
+
+## 三、美联储政策 (Warsh 主席)
+
+### 英文源 (Google News RSS)
+- **Fed Chair Warsh makes first hires at central bank, including ‘Project 2025’ author** — CNBC | Tue, 02 Jun 2026
+- **Kevin Warsh Wants the Fed to Think About Inflation Differently** — WSJ | Tue, 02 Jun 2026
+- **Central bank faces political 'stress test' that threatens economy, ex-Fed Chair Powell says** — ABC News - Breaking News, Latest News and Videos | Tue, 02 Jun 2026
+
+**影响方向**: 🟡 中性偏空 (🔥 6/2 突发独立性 + 政治化风险)
+**交叉验证**: CNBC + WSJ + ABC News + 24/7 Wall St. ≥4 源
+**行情**: 🔥 Warsh 首批人事含 Project 2025 作者 — Powell 警告政治压力
+**6/2 收盘 (受影响板块)**: MSFT -4.17%, GOOGL -3.86%, CRM -4.18%, WMT -1.34%, KO -0.29%, JPM +1.48% (科技/应用软件/防守股普跌, 银行板块逆势涨)
+
+## 四、贸易 / Trump 访华
+
+### 英文源 (Google News RSS)
+- **Trump Touts ‘Fantastic Trade Deals’ With China, but Details Are Scarce** — The New York Times | Fri, 15 May 2026
+- **Trump talks up trade deals with China, but experts see no big wins for U.S.** — CBS News | Fri, 15 May 2026
+- **Media Briefing: Making Sense of the Trump-Xi Summit** — Council on Foreign Relations | Fri, 15 May 2026
+
+**影响方向**: 🟡 中性 (实质利好有限)
+**交叉验证**: NYT + CBS News + CFR + NewsNation ≥4 源
+**行情**: AAPL +2.9% (防御受益), TSLA +1.89% (FSD 入华催化), CAT +5.14% (工业轮动)
+
+## 五、原材料 / 稀土 / 钨 (AMAT / FCX)
+
+### 英文源 (Google News RSS)
+- **Skyrocketing tungsten prices bruise U.S. manufacturers** — marketplace.org | Fri, 29 May 2026
+- **The Critical Minerals Platform (CMP) Report: The Chokepoints Nobody Sees Until They Matter** — InvestorNews | Mon, 25 May 2026
+- **China Tightens the Screws on Key Metals After Rare Earth Truce With Trump** — Crude Oil Prices Today | OilPrice.com | Tue, 30 Dec 2025
+
+**影响方向**: 🔴 利空 AMAT 成本端 / 🟢 利多钨/铜矿商 (FCX)
+**交叉验证**: marketplace + InvestorNews + CrudeOilPrices + Washington Post ≥4 源
+**行情**: 🔥 钨价 5 月以来飙涨 6x
+**6/2 收盘**: AMAT +6.96% (板块情绪盖过成本利空), FCX +6.98% (铜矿强势)
+
+## 六、特斯拉 FSD 入华 🇨🇳
+
+### 中文源 (Google News zh-CN)
+- **特斯拉FSD入华刚上桌，比亚迪出手就把桌掀了** — 创业邦 | Thu, 21 May 2026
+- **FSD入华是挑战也是机遇_新浪新闻** — 新浪网 | Tue, 02 Jun 2026
+- **特斯拉官宣：监督版FSD登陆中国！** — 21财经 | Tue, 02 Jun 2026
+
+**影响方向**: 🟢 利好 TSLA / 🟡 中性 A股智驾板块
+**交叉验证**: 21财经 + 新浪 ≥2 源 (中文独有)
+**行情**: 🔥 6/2 双源同日报道: 特斯拉官宣"监督版FSD登陆中国"
+**6/2 收盘**: TSLA $423.74 (+1.89%)
+
+## 七、中国货币政策 (国内宏观)
+
+### 中文源 (Google News zh-CN)
+- **中国人民银行：今年将灵活高效运用降准降息等货币政策工具** — 人民网财经 | Thu, 21 May 2026
+- **央行为何不再提“降准降息”？货币政策转向“精准有效”** — 21财经 | Fri, 06 Mar 2026
+- **中国发布丨央行：今年降准降息还有一定空间** — 中国网新闻中心 | Mon, 05 Jan 2026
+
+**影响方向**: 🟡 中性 (工具保留但短期不急)
+**交叉验证**: 人民网 + 21财经 + 新浪 ≥3 源
+**行情**: US-only 持仓，不直接影响
+
+## 八、A 股外资流入 / 板块轮动
+
+### 中文源 (Google News zh-CN)
+- **东山精密2026年6月2日涨停分析：AI产业链+业绩增长+资金流入** — 新浪财经 | Sat, 21 Feb 2026
+- **A股进入新阶段分化加大_新浪新闻** — 新浪网 | Sun, 19 Apr 2026
+- **证监会副主席刘浩凌：外资通过各种渠道稳步流入中国股市 持有市值超过4万亿元** — 新浪财经 | Thu, 05 Mar 2026
+
+**影响方向**: 🟡 中性 (数据层利好，非短期催化)
+**交叉验证**: 新浪财经 + 新浪网 ≥2 源
+**行情**: US-only 持仓，不直接影响
+
+---
+
+## 🎯 持仓影响评估 + 操作建议 (8 条)
+
+### 1. NVDA — 🟡 持有观望，紧密盯 216.25 止损
+   **逻辑链**: 基本面（$816B 营收 + Vera Rubin）硬核 → 长期🟢；但 (a) 6/2 跌 0.69% 接近止损；(b) 6/3 CNBC 突发 Warsh 人事独立性质疑 → 板块情绪负面；建议不破 216.25 不动，破了止损砍仓
+
+### 2. AMAT — 🟢 已浮盈 +6.7%（cost 459.33 → 490.05）
+   **逻辑链**: 钨价利空 (基本) 被 AI 板块情绪盖过 (短线) → 等回踩 5 日均线部分止盈 / 移动止盈 5% 上移到 465；6/2 +6.96% 属于反弹尖峰，不排除次日回吐
+
+### 3. CAT — 🟡 接近成本（cost 898 → close 909.81，+1.3%）
+   **逻辑链**: 鹰派Warsh+长端利率上行 = 工业股压制；TSM 6/2 涨 2.54% + 板块轮动回工业 = 中性偏多；建议不破 853.10 持有，触发再观察
+
+### 4. TSM — 🟡 已在持仓，6/2 涨 2.54% 强势
+   **逻辑链**: 台海风险长期利空 (基本) vs 供应链分散化利好+AI 需求 (短线) → 6/2 涨势属地缘风险缓解 + AI 主线；6/3 CNBC Fed 突发对成长股负面，可能拖累 NVDA/TSM 开盘；建议若跌破 412 考虑减仓 1/3
+
+### 5. GOOGL / META / CRM — 🔴 6/2 大跌（GOOGL -3.86%, META -0.47%, CRM -4.18%）
+   **逻辑链**: Warsh 独立性 → 利率风险溢价上升 + 应用层软件估值压缩；GOOGL -3.86% 跌幅最大，可能受 AI 搜索反垄断或广告增速担忧；CRM -4.18% 是单点异常，建议暂不加仓，等技术面企稳
+
+### 6. AAPL — 🟢 6/2 涨 2.9% — 防御+消费主线受益
+   **逻辑链**: Trump 访华贸易缓和叙事 + Warsh 鹰派对防御股利好（避险）；AAPL 兼具消费+科技双重身份 → 短期🟢；建议持有，破 305 关注
+
+### 7. FCX — 🟡 不在持仓但出现 +6.98%
+   **逻辑链**: 钨/稀土涨势外溢至铜（半导体+电动车需求）+ 美元回落可能；如要找钨/稀土板块受益标的，FCX 是个 proxy 但非直接受益；不主动建仓（独立逻辑不足）
+
+### 8. 整体仓位 — cash 偏高，6/3 美股开盘前如有 -1.5%+ 回踩可加仓 NVDA/AMAT
+   **逻辑链**: cash 85% > 60% 阈值；Warsh 突发是潜在加仓窗口（市场过度反应创造买点）；建议只加已持仓 + 板块主线的（不新建仓 GOOGL/META/CRM 等独立逻辑弱的）
+
+---
+
+## 📊 持仓快照 (6/2 ET 收盘)
+
+| Ticker | Close | 1d % | 备注 |
+|--------|------:|-----:|------|
+| NVDA | $222.82000732421875 | -0.69% | 🔴 6/2 22:32 建仓 cost 227.63 → 现 222.82 浮亏 -2.1%，接近 216.25 止损 |
+| AMAT | $490.04998779296875 | +6.96% | 🟢 6/2 00:44 建仓 cost 459.33 → 现 490.05 浮盈 +6.7% |
+| CAT | $909.8099975585938 | +5.14% | 🟡 6/2 22:32 建仓 cost 898.00 → 现 909.81 微利 +1.3% |
+| TSM | $446.69000244140625 | +2.54% | 🟢 已持仓，跟随 AI 主线 |
+| AAPL | $315.20001220703125 | +2.90% | 🟢 防御+消费受益 |
+| TSLA | $423.739990234375 | +1.89% | 🟢 FSD 入华催化 |
+| MSFT | $441.30999755859375 | -4.17% | 🔴 跌 4.17% (Warsh 鹰派利空) |
+| GOOGL | $361.8500061035156 | -3.86% | 🔴 跌 3.86% (单日领跌) |
+| META | $597.6300048828125 | -0.47% | 🔴 跌 0.47% 弱势 |
+| JPM | $300.9599914550781 | +1.48% | 🟡 金融跟涨 +1.48% |
+| GS | $1064.5799560546875 | +1.53% | 🟡 +1.53% 反弹 (curve bear steepener) |
+| KO | $78.41000366210938 | -0.29% | 🟡 -0.29% 几乎持平 |
+| PEP | $142.0 | +0.34% | 🟢 +0.34% 防守稳健 |
+| WMT | $113.05999755859375 | -1.34% | 🔴 -1.34% 跑输 |
+| AMD | $521.5399780273438 | +2.24% | 🟢 +2.24% AI 主线 |
+| CRM | $200.83999633789062 | -4.18% | 🔴 跌 4.18% 单点异常 |
+| INTC | $107.93000030517578 | -1.28% | 🔴 -1.28% 弱势 |
+| ORCL | $244.5800018310547 | -1.44% | 🟡 -1.44% (TP1 已锁 1/3) |
+| FCX | $71.72000122070312 | +6.98% | 🟡 +6.98% (非持仓, 钨/铜 proxy) |
+
+---
+
+## ⚙️ 方法学说明
+
+- 1. Yahoo v8 chart 1d 5d range → 取最近 2 个 close 计算 ±1d change（避免 chartPreviousClose stale 风险）
+- 2. Sina hq.sinajs.cn 用于 HK 指数 ground truth（每 3s 刷新，但本扫描只看 HSI/HSTECH/HSCEI 点位）
+- 3. 美股 6/2 已收盘（ET 16:00 = BJT 04:00 next day），本扫描 BJT 6/3 早间运行，看到的是 6/2 收盘数据
+- 4. 6/3 开盘 (ET 9:30 = BJT 21:30) 数据未在本扫描范围 — Warsh 突发新闻影响 6/3 开盘走势
+- 5. 利好/利空标签 = 基于事件本身 + 当前价格位置 + 持仓组合 三重考量
+
+---
+
+**输出文件**: `~/stock_trader/market_events_latest.json` (29.1 KB)
+**生成时间**: 2026-06-03T10:02:29.641296+08:00

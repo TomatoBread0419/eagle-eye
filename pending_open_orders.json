@@ -1,0 +1,10 @@
+[
+  {
+    "symbol": "BAC",
+    "qty": 35,
+    "side": "buy",
+    "order_id": "e3db5e30-9aff-43ec-83a0-d76708812be8",
+    "timestamp": "2026-07-06T21:14:44.773758",
+    "reason": "fill_finance_gap"
+  }
+]

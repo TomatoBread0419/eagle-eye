@@ -1,0 +1,198 @@
+{
+  "_meta": {
+    "version": 2,
+    "description": "AI可调评分权重 — 每日开盘前由AI根据市场环境调整",
+    "last_updated": "2026-07-07",
+    "updated_by": "P1.3_governance_lock"
+  },
+  "score_weights": {
+    "ret_1m": 0.55,
+    "ret_3m": 0.28,
+    "ret_short": 0.12,
+    "_comment_ret_1m": "1月动量权重。趋势市↑，震荡市↓，反转市可为负",
+    "_comment_ret_3m": "3月动量权重。稳定趋势↑，快速轮动↓",
+    "_comment_ret_short": "5日动量权重。短线市场↑，趋势为主↓"
+  },
+  "rsi_scoring": {
+    "normal_threshold": 80,
+    "defensive_threshold": 65,
+    "normal_penalty": -10,
+    "extreme_threshold": 90,
+    "extreme_penalty": -15,
+    "_comment": "RSI超过阈值后扣分。防御模式用更低阈值"
+  },
+  "volatility_scoring": {
+    "low_vol_threshold": 20,
+    "low_vol_bonus": 3,
+    "mid_vol_threshold": 30,
+    "mid_vol_bonus": 1,
+    "high_vol_threshold": 40,
+    "high_vol_penalty": -1,
+    "extreme_vol_threshold": 50,
+    "extreme_vol_penalty": -3,
+    "_comment": "低波动加分(安全)，高波动扣分(风险)"
+  },
+  "ma_scoring": {
+    "uptrend_bonus": 3,
+    "cross_bonus": 2,
+    "_comment": "均线多头+均线金叉加分"
+  },
+  "volume_scoring": {
+    "bullish_confirmation": 3,
+    "divergence_penalty": -3,
+    "bearish_penalty": -2,
+    "_comment": "量价配合：放量上涨→确认，缩量虚涨→假突破，放量下跌→出货"
+  },
+  "macd_scoring": {
+    "golden_cross": 3,
+    "death_cross": -2,
+    "above_zero_bonus": 1,
+    "_comment": "MACD金叉死叉信号"
+  },
+  "rs_vs_spy_scoring": {
+    "strong_rs_threshold": 5.0,
+    "strong_rs_bonus": 2,
+    "moderate_rs_threshold": 2.0,
+    "moderate_rs_bonus": 1,
+    "weak_rs_threshold": -5.0,
+    "weak_rs_penalty": -2,
+    "_comment": "相对SPY强度。超过阈值加分/扣分"
+  },
+  "sector_gap_scoring": {
+    "large_gap_threshold": 0.03,
+    "large_gap_bonus": 5,
+    "medium_gap_threshold": 0.02,
+    "medium_gap_bonus": 3,
+    "small_gap_threshold": 0.01,
+    "small_gap_bonus": 2,
+    "_comment": "板块缺口越大加分越多。数值是小数(3%=0.03)"
+  },
+  "yfinance_scoring": {
+    "beta_high_threshold": 2.0,
+    "beta_high_penalty": -2,
+    "beta_mid_threshold": 1.5,
+    "beta_mid_penalty": -1,
+    "beta_low_threshold": 0.5,
+    "beta_low_bonus": 1,
+    "pe_expensive_threshold": 50,
+    "pe_expensive_penalty": -2,
+    "pe_fair_low": 10,
+    "pe_fair_high": 25,
+    "pe_fair_bonus": 2,
+    "pe_moderate_high": 35,
+    "pe_moderate_bonus": 1,
+    "div_yield_threshold": 0.02,
+    "div_yield_bonus": 1,
+    "_comment": "基本面评分阈值。yfinance可能限流，优雅降级"
+  },
+  "buy_filter": {
+    "defensive_rsi_limit": 65,
+    "normal_rsi_limit": 78,
+    "min_momentum_score": 3,
+    "defensive_max_volatility": 45,
+    "_comment": "买入候选过滤条件。高于RSI限制/低于动量下限/防御模式波动率上限→排除"
+  },
+  "defense_sector_bonus": {
+    "telecom": 5,
+    "defense": 5,
+    "energy": 4,
+    "pharma": 3,
+    "consumer": 2,
+    "resources": 1,
+    "finance": 0,
+    "industrial": 0,
+    "tech": -2,
+    "ai": -3,
+    "_comment": "防御模式下板块加分。正数=防御属性强，负数=进攻属性"
+  },
+  "_design_defaults": {
+    "score_weights": {
+      "ret_1m": 0.55,
+      "ret_3m": 0.28,
+      "ret_short": 0.12
+    },
+    "rsi_scoring": {
+      "normal_threshold": 80,
+      "defensive_threshold": 65,
+      "normal_penalty": -10,
+      "extreme_threshold": 90,
+      "extreme_penalty": -15
+    },
+    "volatility_scoring": {
+      "low_vol_threshold": 20,
+      "low_vol_bonus": 3,
+      "mid_vol_threshold": 30,
+      "mid_vol_bonus": 1,
+      "high_vol_threshold": 40,
+      "high_vol_penalty": -1,
+      "extreme_vol_threshold": 50,
+      "extreme_vol_penalty": -3
+    },
+    "ma_scoring": {
+      "uptrend_bonus": 3,
+      "cross_bonus": 2
+    },
+    "volume_scoring": {
+      "bullish_confirmation": 3,
+      "divergence_penalty": -3,
+      "bearish_penalty": -2
+    },
+    "macd_scoring": {
+      "golden_cross": 3,
+      "death_cross": -2,
+      "above_zero_bonus": 1
+    },
+    "rs_vs_spy_scoring": {
+      "strong_rs_threshold": 5.0,
+      "strong_rs_bonus": 2,
+      "moderate_rs_threshold": 2.0,
+      "moderate_rs_bonus": 1,
+      "weak_rs_threshold": -5.0,
+      "weak_rs_penalty": -2
+    },
+    "sector_gap_scoring": {
+      "large_gap_threshold": 0.03,
+      "large_gap_bonus": 5,
+      "medium_gap_threshold": 0.02,
+      "medium_gap_bonus": 3,
+      "small_gap_threshold": 0.01,
+      "small_gap_bonus": 2
+    },
+    "yfinance_scoring": {
+      "beta_high_threshold": 2.0,
+      "beta_high_penalty": -2,
+      "beta_mid_threshold": 1.5,
+      "beta_mid_penalty": -1,
+      "beta_low_threshold": 0.5,
+      "beta_low_bonus": 1,
+      "pe_expensive_threshold": 50,
+      "pe_expensive_penalty": -2,
+      "pe_fair_low": 10,
+      "pe_fair_high": 25,
+      "pe_fair_bonus": 2,
+      "pe_moderate_high": 35,
+      "pe_moderate_bonus": 1,
+      "div_yield_threshold": 0.02,
+      "div_yield_bonus": 1
+    },
+    "buy_filter": {
+      "defensive_rsi_limit": 65,
+      "normal_rsi_limit": 78,
+      "min_momentum_score": 3,
+      "defensive_max_volatility": 45
+    },
+    "defense_sector_bonus": {
+      "telecom": 5,
+      "defense": 5,
+      "energy": 4,
+      "pharma": 3,
+      "consumer": 2,
+      "resources": 1,
+      "finance": 0,
+      "industrial": 0,
+      "tech": -2,
+      "ai": -3
+    },
+    "_note": "Design baseline — any weight change >20% from these values requires Owner approval"
+  }
+}

@@ -1,0 +1,189 @@
+{
+  "pending": [
+    {
+      "symbol": "AMD",
+      "reason": "take_profit",
+      "qty": 10,
+      "price": 522.37,
+      "timestamp": "2026-07-07T16:24:32.179762+00:00",
+      "replace_by": "2026-07-07T17:24:32.179906+00:00"
+    },
+    {
+      "symbol": "COHR",
+      "reason": "take_profit",
+      "qty": 8,
+      "price": 318.765,
+      "timestamp": "2026-07-07T16:24:34.906669+00:00",
+      "replace_by": "2026-07-07T17:24:34.906820+00:00"
+    },
+    {
+      "symbol": "MU",
+      "reason": "take_profit",
+      "qty": 10,
+      "price": 928.4,
+      "timestamp": "2026-07-07T16:24:36.893678+00:00",
+      "replace_by": "2026-07-07T17:24:36.893814+00:00"
+    },
+    {
+      "symbol": "INTC",
+      "reason": "take_profit",
+      "qty": 8,
+      "price": 106.36,
+      "timestamp": "2026-07-08T15:12:41.586939+00:00",
+      "replace_by": "2026-07-08T16:12:41.586997+00:00"
+    },
+    {
+      "symbol": "AMAT",
+      "reason": "take_profit",
+      "qty": 11,
+      "price": 587.98,
+      "timestamp": "2026-07-09T19:15:24.018758+00:00",
+      "replace_by": "2026-07-09T20:15:24.018872+00:00"
+    },
+    {
+      "symbol": "SNOW",
+      "reason": "take_profit",
+      "qty": 6,
+      "price": 271.155,
+      "timestamp": "2026-07-13T17:15:17.677098+00:00",
+      "replace_by": "2026-07-13T18:15:17.677199+00:00"
+    },
+    {
+      "symbol": "TXN",
+      "reason": "take_profit",
+      "qty": 20,
+      "price": 300.17,
+      "timestamp": "2026-07-13T17:15:21.259473+00:00",
+      "replace_by": "2026-07-13T18:15:21.259579+00:00"
+    },
+    {
+      "symbol": "C",
+      "reason": "trail_stop",
+      "qty": 1,
+      "price": 132.495,
+      "timestamp": "2026-07-14T18:04:03.916812+00:00",
+      "replace_by": "2026-07-14T19:04:03.916858+00:00"
+    },
+    {
+      "symbol": "ARM",
+      "reason": "take_profit",
+      "qty": 13,
+      "price": 284.015,
+      "timestamp": "2026-07-14T18:04:07.840714+00:00",
+      "replace_by": "2026-07-14T19:04:07.840770+00:00"
+    },
+    {
+      "symbol": "IBM",
+      "reason": "take_profit",
+      "qty": 10,
+      "price": 219.38,
+      "timestamp": "2026-07-14T18:51:20.495754+00:00",
+      "replace_by": "2026-07-14T19:51:20.495806+00:00"
+    },
+    {
+      "symbol": "AAPL",
+      "reason": "take_profit",
+      "qty": 3,
+      "price": 331.05,
+      "timestamp": "2026-07-20T13:41:26.728546+00:00",
+      "replace_by": "2026-07-20T14:41:26.728653+00:00"
+    },
+    {
+      "symbol": "GE",
+      "reason": "take_profit",
+      "qty": 34,
+      "price": 346.92,
+      "timestamp": "2026-07-20T14:21:40.849941+00:00",
+      "replace_by": "2026-07-20T15:21:40.850036+00:00"
+    },
+    {
+      "symbol": "MS",
+      "reason": "trail_stop",
+      "qty": 14,
+      "price": 212.94,
+      "timestamp": "2026-07-20T15:02:47.811663+00:00",
+      "replace_by": "2026-07-20T16:02:47.811726+00:00"
+    },
+    {
+      "symbol": "CSCO",
+      "reason": "take_profit",
+      "qty": 10,
+      "price": 111.68,
+      "timestamp": "2026-07-20T15:42:06.931349+00:00",
+      "replace_by": "2026-07-20T16:42:06.931437+00:00"
+    },
+    {
+      "symbol": "MP",
+      "reason": "take_profit",
+      "qty": 54,
+      "price": 46.23,
+      "timestamp": "2026-07-21T18:24:12.687795+00:00",
+      "replace_by": "2026-07-21T19:24:12.687861+00:00"
+    },
+    {
+      "symbol": "DASH",
+      "reason": "take_profit",
+      "qty": 5,
+      "price": 178.54,
+      "timestamp": "2026-07-22T16:21:25.937300+00:00",
+      "replace_by": "2026-07-22T17:21:25.937359+00:00"
+    },
+    {
+      "symbol": "DDOG",
+      "reason": "take_profit",
+      "qty": 10,
+      "price": 247.1,
+      "timestamp": "2026-07-22T16:21:29.032612+00:00",
+      "replace_by": "2026-07-22T17:21:29.032663+00:00"
+    },
+    {
+      "symbol": "META",
+      "reason": "take_profit",
+      "qty": 1,
+      "price": 625.48,
+      "timestamp": "2026-07-22T18:04:17.282342+00:00",
+      "replace_by": "2026-07-22T19:04:17.282394+00:00"
+    },
+    {
+      "symbol": "CRML",
+      "reason": "take_profit",
+      "qty": 507,
+      "price": 6.6,
+      "timestamp": "2026-07-22T18:27:44.513794+00:00",
+      "replace_by": "2026-07-22T19:27:44.513873+00:00"
+    },
+    {
+      "symbol": "PANW",
+      "reason": "trail_stop",
+      "qty": 27,
+      "price": 326.505,
+      "timestamp": "2026-07-23T13:47:20.310784+00:00",
+      "replace_by": "2026-07-23T14:47:20.310852+00:00"
+    },
+    {
+      "symbol": "SHOP",
+      "reason": "trail_stop",
+      "qty": 10,
+      "price": 115.79,
+      "timestamp": "2026-07-23T13:47:22.735320+00:00",
+      "replace_by": "2026-07-23T14:47:22.735436+00:00"
+    },
+    {
+      "symbol": "FTNT",
+      "reason": "take_profit",
+      "qty": 10,
+      "price": 153.025,
+      "timestamp": "2026-07-23T14:09:50.701910+00:00",
+      "replace_by": "2026-07-23T15:09:50.702032+00:00"
+    },
+    {
+      "symbol": "ZS",
+      "reason": "take_profit",
+      "qty": 10,
+      "price": 139.73,
+      "timestamp": "2026-07-23T15:46:36.601387+00:00",
+      "replace_by": "2026-07-23T16:46:36.601592+00:00"
+    }
+  ],
+  "cleaned_at": "2026-07-02T21:15:41.305536"
+}

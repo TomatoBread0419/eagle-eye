@@ -1,0 +1,9 @@
+{
+  "event_type": "EXIT_DEGRADED",
+  "timestamp": "2026-06-18T08:43:22.953519+00:00",
+  "bj_time": "2026-06-18 16:43:22",
+  "details": {
+    "active": false
+  },
+  "level": "warning"
+}

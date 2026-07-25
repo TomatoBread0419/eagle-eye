@@ -1,0 +1,70 @@
+{
+  "_meta": {
+    "version": 1,
+    "calibration_date": "2026-07-14",
+    "lookback_days": 90,
+    "total_trades": 125
+  },
+  "kelly": {
+    "sigmoid_k": 0.05,
+    "sigmoid_midpoint": 18.4,
+    "atr_to_odds_slope": 0.107,
+    "atr_to_odds_intercept": 0.96,
+    "target_alloc": 0.85,
+    "max_pct_large_cap": 0.2,
+    "max_pct_small_cap": 0.1,
+    "actual_win_rate": 0.432,
+    "actual_avg_win": 6.57,
+    "actual_avg_loss": 4.11,
+    "actual_odds": 1.6,
+    "sample_size": 125,
+    "calibration_quality": "from_kelly_summary"
+  },
+  "stop_loss": {
+    "tier_vol_20": 0.07,
+    "tier_vol_35": 0.08,
+    "tier_vol_50": 0.09,
+    "tier_vol_max": 0.1,
+    "adjustment": 0,
+    "adjustment_reason": "wr=0.43 odds=1.60",
+    "sample_size": 125,
+    "calibration_quality": "from_kelly_summary"
+  },
+  "score_weights": {
+    "ret_1m": 0.55,
+    "ret_3m": 0.28,
+    "ret_short": 0.12,
+    "_comment_ret_1m": "1月动量权重。趋势市↑，震荡市↓，反转市可为负",
+    "_comment_ret_3m": "3月动量权重。稳定趋势↑，快速轮动↓",
+    "_comment_ret_short": "5日动量权重。短线市场↑，趋势为主↓",
+    "actual_win_rate": 0.432,
+    "actual_odds": 1.6,
+    "sample_size": 125,
+    "calibration_quality": "from_kelly_summary"
+  },
+  "sector_bonus": {},
+  "regime": {
+    "regime": "quiet",
+    "vix": 17.5,
+    "pct_above_ma200": 56.8,
+    "ad_ratio": 1.13
+  },
+  "regime_overrides": {
+    "score_weights": {
+      "volume_bullish": 1,
+      "rs_vs_spy": 1
+    },
+    "rsi_threshold_relax": 0,
+    "stop_loss_widen": 0,
+    "defense_bonus_boost": 0
+  },
+  "_drift_check": {
+    "baseline_date": "NEW",
+    "max_drift": 0.2,
+    "exceeded": false,
+    "details": [
+      "First calibration — baseline created"
+    ],
+    "verdict": "PASSED — initial baseline"
+  }
+}

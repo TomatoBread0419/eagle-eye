@@ -1,0 +1,671 @@
+{
+  "version": "1.0",
+  "events": [
+    {
+      "sector": "地缘/台海",
+      "direction": "🔴 利空",
+      "stocks": [
+        "LMT",
+        "RTX",
+        "NOC",
+        "MP",
+        "CRML",
+        "GLD",
+        "GDX"
+      ],
+      "key_news": [
+        "NVIDIA's 75% Margins vs TSMC's Foundry Gamble: Two Paths to AI Dominance, One Winner",
+        "The Chain of Peace: Do Supply Chain Chokepoints Deter War?",
+        "Why Taiwan Is At The Heart Of US-China Rivalry"
+      ],
+      "detected_at": "2026-07-20T23:19:45.572388+08:00",
+      "action": "ai_analyzed",
+      "analysis": {
+        "confidence": 80,
+        "reasoning": "台海紧张升级→市场避险情绪升温+军工/稀土/黄金作为地缘对冲标的获得资金流入；NVIDIA毛利率vs台积电代工依赖凸显半导体供应链脆弱性，加速西方稀土/军工去风险化。",
+        "recommendations": [
+          {
+            "symbol": "GLD",
+            "action": "BUY",
+            "position": 1.4,
+            "hold_days": 5,
+            "confidence": 80,
+            "reason": "地缘避险首选，台海风险升温最直接的受益资产"
+          },
+          {
+            "symbol": "LMT",
+            "action": "BUY",
+            "position": 1.4,
+            "hold_days": 10,
+            "confidence": 75,
+            "reason": "台海紧张直接利好最大军工主承包商，F-35订单预期上升"
+          },
+          {
+            "symbol": "RTX",
+            "action": "BUY",
+            "position": 1.4,
+            "hold_days": 10,
+            "confidence": 70,
+            "reason": "导弹+航发双重受益，台海冲突场景下弹药消耗叙事最强"
+          }
+        ],
+        "risk_note": "台海局势迅速缓和（如高层热线恢复/联合声明）将导致军工+稀土回吐溢价，黄金也会快速回落。若冲突仅限于口头施压无实质军事动作，军工股可能\"买预期卖事实\"。",
+        "strength": "中"
+      }
+    },
+    {
+      "sector": "原材料",
+      "direction": "🔴 利空",
+      "stocks": [
+        "MP",
+        "CRML",
+        "XLE",
+        "VLO",
+        "OXY",
+        "FCX",
+        "NEM"
+      ],
+      "key_news": [
+        "Executive summary – Global Critical Minerals Outlook 2026 – Analysis",
+        "Critical Minerals Report (06.14.2026): Control is the New Commodity",
+        "Skyrocketing tungsten prices bruise U.S. manufacturers"
+      ],
+      "detected_at": "2026-07-20T23:20:22.040487+08:00",
+      "action": "ai_analyzed",
+      "analysis": {
+        "confidence": 65,
+        "reasoning": "钨价暴涨反映关键矿物供应链成本飙升，美国制造商利润受压→政策层面临时价格管控/加速替代供应来源风险→关键矿物矿企估值承压，下游需求面临萎缩。",
+        "recommendations": [
+          {
+            "symbol": "MP",
+            "action": "SELL",
+            "position": 5.0,
+            "hold_days": 5,
+            "confidence": 65,
+            "reason": "稀土直接受关键矿物政策收紧影响，报告强调\"控制即商品\"暗示政府可能干预定价或加速去中国化替代"
+          },
+          {
+            "symbol": "FCX",
+            "action": "SELL",
+            "position": 5.0,
+            "hold_days": 5,
+            "confidence": 55,
+            "reason": "铜被列为关键矿物，供应链成本传导+制造商需求放缓双杀"
+          }
+        ],
+        "risk_note": "若钨价上涨被市场解读为\"供应短缺=矿企定价权增强\"，则逻辑反转；或政策报告仅是展望性内容未落地实质措施，利空被消化为噪音。",
+        "strength": "中"
+      }
+    },
+    {
+      "action": "executed",
+      "executed_at": "2026-07-21T00:05:12.967487+08:00",
+      "mode": "live",
+      "executed_syms": [
+        "GLD",
+        "RTX"
+      ],
+      "details": [
+        {
+          "symbol": "GLD",
+          "action": "BUY",
+          "qty": 6,
+          "price": 368.36,
+          "stop": 342.57,
+          "position_pct": 2.1,
+          "hold_days": 5,
+          "confidence": 80,
+          "reason": "地缘/台海 🔴 利空"
+        },
+        {
+          "symbol": "RTX",
+          "action": "BUY",
+          "qty": 12,
+          "price": 196.96,
+          "stop": 183.17,
+          "position_pct": 2.3,
+          "hold_days": 10,
+          "confidence": 70,
+          "reason": "地缘/台海 🔴 利空"
+        }
+      ]
+    },
+    {
+      "action": "executed",
+      "executed_at": "2026-07-21T22:11:20.543807+08:00",
+      "mode": "live",
+      "executed_syms": [
+        "LMT"
+      ],
+      "details": [
+        {
+          "symbol": "LMT",
+          "action": "BUY",
+          "qty": 5,
+          "price": 504.16,
+          "stop": 468.87,
+          "position_pct": 2.5,
+          "hold_days": 10,
+          "confidence": 75,
+          "reason": "地缘/台海 🔴 利空"
+        }
+      ]
+    },
+    {
+      "sector": "地缘/台海",
+      "direction": "🔴 利空",
+      "stocks": [
+        "LMT",
+        "RTX",
+        "NOC",
+        "MP",
+        "CRML",
+        "GLD",
+        "GDX"
+      ],
+      "key_news": [
+        "Taiwan Strait Tensions Push Countries to Diversify Semiconductor Supply Chains",
+        "Taiwan Explained: Why China Claims It, and Why the U.S. Is Involved",
+        "Taiwan’s chips power the global economy. China holds the leverage"
+      ],
+      "detected_at": "2026-07-22T02:08:57.805338+08:00",
+      "action": "ai_analyzed",
+      "analysis": {
+        "confidence": 75,
+        "reasoning": "台海紧张→军费预期升温+稀土供应链脱钩中国叙事强化→防务承包商和稀土股受益，黄金避险买盘跟进。",
+        "recommendations": [
+          {
+            "symbol": "LMT",
+            "action": "BUY",
+            "position": 2.8,
+            "hold_days": 20,
+            "confidence": 75,
+            "reason": "全球最大防务商，台海升温直接推高军备订单预期"
+          },
+          {
+            "symbol": "RTX",
+            "action": "BUY",
+            "position": 2.2,
+            "hold_days": 20,
+            "confidence": 70,
+            "reason": "导弹+航发双引擎，冲突场景下弹药消耗叙事最强"
+          },
+          {
+            "symbol": "NOC",
+            "action": "BUY",
+            "position": 2.2,
+            "hold_days": 20,
+            "confidence": 70,
+            "reason": "B-21+核潜艇，台海对抗场景下战略资产需求确定性高"
+          }
+        ],
+        "risk_note": "美中突然外交缓和（如热线通话/高层会晤）或赖清德发表缓和言论，整个冲突叙事瓦解，防务股回吐溢价，稀土股回归基本面估值。另外特朗普若宣布对台政策重大调整也可能逆转预期。",
+        "strength": "强"
+      }
+    },
+    {
+      "sector": "原材料",
+      "direction": "🔴 利空",
+      "stocks": [
+        "MP",
+        "CRML",
+        "XLE",
+        "VLO",
+        "OXY",
+        "FCX",
+        "NEM"
+      ],
+      "key_news": [
+        "Executive summary – Global Critical Minerals Outlook 2026 – Analysis",
+        "Critical Minerals Report (06.14.2026): Control is the New Commodity",
+        "Skyrocketing tungsten prices bruise U.S. manufacturers"
+      ],
+      "detected_at": "2026-07-22T02:10:38.594757+08:00",
+      "action": "ai_analyzed",
+      "analysis": {
+        "confidence": 65,
+        "reasoning": "钨价飙升叠加关键矿产供应链控制权争夺，推高美国制造商原材料成本，压缩矿商利润率预期，市场对资源民族主义和出口管制的担忧导致整个材料板块估值承压。",
+        "recommendations": [
+          {
+            "symbol": "MP",
+            "action": "BUY",
+            "position": 2.0,
+            "hold_days": 10,
+            "confidence": 65,
+            "reason": "稀土龙头受供应链恐慌情绪错杀，中长期受益于西方替代逻辑，回调是建仓机会"
+          },
+          {
+            "symbol": "FCX",
+            "action": "SELL",
+            "position": 2.0,
+            "hold_days": 7,
+            "confidence": 65,
+            "reason": "铜矿巨头直接面临关键矿产政策不确定性，出口管制风险定价上升"
+          },
+          {
+            "symbol": "XLE",
+            "action": "SELL",
+            "position": 2.0,
+            "hold_days": 5,
+            "confidence": 60,
+            "reason": "能源板块间接受材料成本传导影响，短期避险减仓"
+          }
+        ],
+        "risk_note": "中美关键矿产谈判达成协议解除供应恐慌，或钨价快速回落，则成本压力消退逻辑失效，空头标的反弹",
+        "strength": "中"
+      }
+    },
+    {
+      "action": "executed",
+      "executed_at": "2026-07-22T02:11:34.305860+08:00",
+      "mode": "live",
+      "executed_syms": [
+        "NOC",
+        "MP"
+      ],
+      "details": [
+        {
+          "symbol": "NOC",
+          "action": "BUY",
+          "qty": 5,
+          "price": 509.31,
+          "stop": 473.66,
+          "position_pct": 2.5,
+          "hold_days": 20,
+          "confidence": 70,
+          "reason": "地缘/台海 🔴 利空"
+        },
+        {
+          "symbol": "MP",
+          "action": "BUY",
+          "qty": 54,
+          "price": 46.295,
+          "stop": 43.05,
+          "position_pct": 2.4,
+          "hold_days": 10,
+          "confidence": 65,
+          "reason": "原材料 🔴 利空"
+        }
+      ]
+    },
+    {
+      "action": "exited",
+      "symbol": "MP",
+      "exited_at": "2026-07-22T08:35:39.716417+08:00",
+      "exit_reason": "position_not_found_in_alpaca",
+      "entry_price": 46.295,
+      "hold_days": 10,
+      "reason": "原材料 🔴 利空"
+    },
+    {
+      "sector": "原材料",
+      "direction": "🟢 利好原材料股，🔴 利空下游制造",
+      "stocks": [
+        "MP",
+        "CRML",
+        "XLE",
+        "VLO",
+        "OXY",
+        "FCX",
+        "NEM"
+      ],
+      "key_news": [
+        "Executive summary – Global Critical Minerals Outlook 2026 – Analysis",
+        "Critical Minerals Report (06.14.2026): Control is the New Commodity",
+        "China to Address US Rare Earth Shortages After Export Controls | May 2026 - News and Statistics"
+      ],
+      "detected_at": "2026-07-22T16:05:31.755992+08:00",
+      "action": "ai_analyzed",
+      "analysis": {
+        "confidence": 60,
+        "reasoning": "中国在实施稀土出口管制后表态将缓解美国短缺，说明管制已造成真实供应冲击，\"控制即商品\"叙事强化，西方稀土替代链（MP/CRML）获结构性溢价。",
+        "recommendations": [
+          {
+            "symbol": "MP",
+            "action": "BUY",
+            "position": 3.3,
+            "hold_days": 15,
+            "confidence": 60,
+            "reason": ""
+          },
+          {
+            "symbol": "CRML",
+            "action": "BUY",
+            "position": 3.3,
+            "hold_days": 15,
+            "confidence": 60,
+            "reason": ""
+          },
+          {
+            "symbol": "FCX",
+            "action": "BUY",
+            "position": 3.3,
+            "hold_days": 10,
+            "confidence": 60,
+            "reason": ""
+          }
+        ],
+        "risk_note": "中国若真正放开稀土出口配额或达成框架协议，管制溢价瞬间消失，MP/CRML可能回调15-20%。特朗普政策若转向取消管制同样逆风。",
+        "strength": "强"
+      }
+    },
+    {
+      "action": "executed",
+      "executed_at": "2026-07-23T02:15:57.614844+08:00",
+      "mode": "live",
+      "executed_syms": [
+        "CRML",
+        "FCX"
+      ],
+      "details": [
+        {
+          "symbol": "CRML",
+          "action": "BUY",
+          "qty": 507,
+          "price": 6.64,
+          "stop": 6.18,
+          "position_pct": 3.3,
+          "hold_days": 15,
+          "confidence": 60,
+          "reason": "原材料 🟢 利好原材料股，🔴 利空下游制造"
+        },
+        {
+          "symbol": "FCX",
+          "action": "BUY",
+          "qty": 52,
+          "price": 64.285,
+          "stop": 59.79,
+          "position_pct": 3.3,
+          "hold_days": 10,
+          "confidence": 60,
+          "reason": "原材料 🟢 利好原材料股，🔴 利空下游制造"
+        }
+      ]
+    },
+    {
+      "sector": "地缘/台海",
+      "direction": "🔴 利空",
+      "stocks": [
+        "LMT",
+        "RTX",
+        "NOC",
+        "MP",
+        "CRML",
+        "GLD",
+        "GDX"
+      ],
+      "key_news": [
+        "Taiwan Strait Tensions Push Countries to Diversify Semiconductor Supply Chains",
+        "Taiwan Explained: Why China Claims It, and Why the U.S. Is Involved",
+        "The Looming Taiwan Chip Disaster That Silicon Valley Has Long Ignored"
+      ],
+      "detected_at": "2026-07-23T04:10:22.047038+08:00",
+      "action": "ai_analyzed",
+      "analysis": {
+        "confidence": 82,
+        "reasoning": "台海紧张局势升级→半导体供应链中断风险推高全球避险情绪+各国加速军事支出+稀土替代链需求→防务股+稀土链+黄金受益。",
+        "recommendations": [
+          {
+            "symbol": "GLD",
+            "action": "BUY",
+            "position": 1.7,
+            "hold_days": 7,
+            "confidence": 82,
+            "reason": "地缘黑天鹅首选避险资产，流动性最好"
+          },
+          {
+            "symbol": "LMT",
+            "action": "BUY",
+            "position": 1.7,
+            "hold_days": 10,
+            "confidence": 78,
+            "reason": "全球头号防务承包商，台海紧张直接推升军售订单预期"
+          },
+          {
+            "symbol": "RTX",
+            "action": "BUY",
+            "position": 1.7,
+            "hold_days": 10,
+            "confidence": 75,
+            "reason": "导弹+航发双引擎，亚太军事部署加速直接受益"
+          }
+        ],
+        "risk_note": "若局势迅速降温（如中美高层通话缓和、军事热线重启），防务+避险逻辑快速瓦解，追多资金集体出逃造成踩踏。",
+        "strength": "强"
+      }
+    },
+    {
+      "sector": "原材料",
+      "direction": "🔴 利空",
+      "stocks": [
+        "MP",
+        "CRML",
+        "XLE",
+        "VLO",
+        "OXY",
+        "FCX",
+        "NEM"
+      ],
+      "key_news": [
+        "Executive summary – Global Critical Minerals Outlook 2026 – Analysis",
+        "Critical Minerals Report (06.14.2026): Control is the New Commodity",
+        "Skyrocketing tungsten prices bruise U.S. manufacturers"
+      ],
+      "detected_at": "2026-07-23T04:13:07.372612+08:00",
+      "action": "ai_analyzed",
+      "analysis": {
+        "confidence": 72,
+        "reasoning": "全球关键矿产展望报告指出供应格局重塑+钨价飙升挤压下游制造商利润，直接冲击美国本土稀有矿产和金属开采商的需求预期与估值逻辑，MP/CRML作为纯稀有矿产标的首当其冲，FCX铜矿需求预期同步承压。",
+        "recommendations": [
+          {
+            "symbol": "MP",
+            "action": "SELL",
+            "position": 3.3,
+            "hold_days": 5,
+            "confidence": 72,
+            "reason": "纯稀土开采商，关键矿产展望利空直接命中，钨价传导至成本端+需求端双重挤压"
+          },
+          {
+            "symbol": "CRML",
+            "action": "SELL",
+            "position": 3.3,
+            "hold_days": 5,
+            "confidence": 68,
+            "reason": "锂/稀土项目开发阶段，关键矿产需求预期下修→融资环境恶化→估值杀伤更重"
+          },
+          {
+            "symbol": "FCX",
+            "action": "SELL",
+            "position": 3.3,
+            "hold_days": 3,
+            "confidence": 55,
+            "reason": "铜矿虽非直接稀土标的但铜需求与关键矿产周期相关性高，传导效应存在"
+          }
+        ],
+        "risk_note": "若报告后续解读为\"供应紧张反而推高矿产品价格\"则逻辑反转，矿商股价可能受益；地缘政治突发利好（如新补贴政策落地）可快速扭转预期。",
+        "strength": "中"
+      }
+    },
+    {
+      "action": "exited",
+      "symbol": "MP",
+      "exited_at": "2026-07-23T08:31:32.202257+08:00",
+      "exit_reason": "position_not_found_in_alpaca",
+      "entry_price": 46.295,
+      "hold_days": 10,
+      "reason": "原材料 🔴 利空"
+    },
+    {
+      "action": "exited",
+      "symbol": "CRML",
+      "exited_at": "2026-07-23T08:31:32.202257+08:00",
+      "exit_reason": "position_not_found_in_alpaca",
+      "entry_price": 6.64,
+      "hold_days": 15,
+      "reason": "原材料 🟢 利好原材料股，🔴 利空下游制造"
+    },
+    {
+      "sector": "地缘/台海",
+      "direction": "🔴 利空",
+      "stocks": [
+        "LMT",
+        "RTX",
+        "NOC",
+        "MP",
+        "CRML",
+        "GLD",
+        "GDX"
+      ],
+      "key_news": [
+        "Taiwan Strait Tensions Push Countries to Diversify Semiconductor Supply Chains",
+        "The Chain of Peace: Do Supply Chain Chokepoints Deter War?",
+        "NVIDIA's 75% Margins vs TSMC's Foundry Gamble: Two Paths to AI Dominance, One Winner"
+      ],
+      "detected_at": "2026-07-24T06:05:16.267002+08:00",
+      "action": "ai_analyzed",
+      "analysis": {
+        "confidence": 88,
+        "reasoning": "台海紧张升级→全球供应链\"去台湾化\"加速→军工获长期订单溢价+稀土本土化需求激增+避险资金涌入黄金,三条支线同时受益。",
+        "recommendations": [
+          {
+            "symbol": "GLD",
+            "action": "BUY",
+            "position": 1.4,
+            "hold_days": 30,
+            "confidence": 88,
+            "reason": "地缘避险首选,台海升温→美元/美债/黄金三角避险"
+          },
+          {
+            "symbol": "MP",
+            "action": "BUY",
+            "position": 1.4,
+            "hold_days": 60,
+            "confidence": 85,
+            "reason": "稀土供应链安全叙事最强标的,中国管制+台海双催化"
+          },
+          {
+            "symbol": "LMT",
+            "action": "BUY",
+            "position": 1.4,
+            "hold_days": 45,
+            "confidence": 82,
+            "reason": "五代机+导弹订单最大受益者,台海溢价直接体现在Pentagon预算"
+          }
+        ],
+        "risk_note": "中美达成某种降温协议或军事热线恢复,台海叙事迅速降温→军工溢价回吐+黄金回落。稀土逻辑失效需中国主动放松出口管制。",
+        "strength": "强"
+      }
+    },
+    {
+      "sector": "原材料",
+      "direction": "🔴 利空",
+      "stocks": [
+        "MP",
+        "CRML",
+        "XLE",
+        "VLO",
+        "OXY",
+        "FCX",
+        "NEM"
+      ],
+      "key_news": [
+        "Executive summary – Global Critical Minerals Outlook 2026 – Analysis",
+        "Critical Minerals Report (06.14.2026): Control is the New Commodity",
+        "Skyrocketing tungsten prices bruise U.S. manufacturers"
+      ],
+      "detected_at": "2026-07-24T06:07:59.208424+08:00",
+      "action": "ai_analyzed",
+      "analysis": {
+        "confidence": 68,
+        "reasoning": "钨价暴涨+关键矿产\"控制即商品\"叙事升级，信号是地缘供应链再定价——上游矿商受益于稀缺溢价，下游制造商承压。MP/CRML作为美国本土稀土替代标的反而可能受益于\"去中国化\"叙事加速，FCX受铜需求下滑风险拖累，能源板块(XLE/VLO/OXY)与关键矿产无直接关联属噪音标的。",
+        "recommendations": [
+          {
+            "symbol": "MP",
+            "action": "BUY",
+            "position": 3.6,
+            "hold_days": 10,
+            "confidence": 68,
+            "reason": "本土稀土龙头，钨/稀土供应链恐慌直接推升稀缺溢价，\"Control is the New Commodity\"叙事核心受益者"
+          },
+          {
+            "symbol": "CRML",
+            "action": "BUY",
+            "position": 2.1,
+            "hold_days": 10,
+            "confidence": 62,
+            "reason": "西方替代链关键标的，关键矿产地缘升级=估值重估催化剂"
+          },
+          {
+            "symbol": "NEM",
+            "action": "BUY",
+            "position": 2.1,
+            "hold_days": 14,
+            "confidence": 58,
+            "reason": "地缘资源博弈升级→避险资金流入黄金，防御性仓位"
+          }
+        ],
+        "risk_note": "若中国主动释放稀土/钨储备平抑价格，稀缺溢价逻辑瞬间瓦解；或美国加速与盟友签订替代供应协议，短期利好出尽。制造业PMI若意外走强则FCX空头失效。",
+        "strength": "中"
+      }
+    },
+    {
+      "action": "exited",
+      "symbol": "MP",
+      "exited_at": "2026-07-24T08:34:14.819314+08:00",
+      "exit_reason": "position_not_found_in_alpaca",
+      "entry_price": 46.295,
+      "hold_days": 10,
+      "reason": "原材料 🔴 利空"
+    },
+    {
+      "action": "exited",
+      "symbol": "CRML",
+      "exited_at": "2026-07-24T08:34:14.819314+08:00",
+      "exit_reason": "position_not_found_in_alpaca",
+      "entry_price": 6.64,
+      "hold_days": 15,
+      "reason": "原材料 🟢 利好原材料股，🔴 利空下游制造"
+    },
+    {
+      "sector": "地缘/台海",
+      "direction": "🔴 利空",
+      "stocks": [
+        "LMT",
+        "RTX",
+        "NOC",
+        "MP",
+        "CRML",
+        "GLD",
+        "GDX"
+      ],
+      "key_news": [
+        "Taiwan Strait Tensions Push Countries to Diversify Semiconductor Supply Chains",
+        "The Chain of Peace: Do Supply Chain Chokepoints Deter War?",
+        "NVIDIA's 75% Margins vs TSMC's Foundry Gamble: Two Paths to AI Dominance, One Winner"
+      ],
+      "detected_at": "2026-07-25T06:12:27.845077+08:00",
+      "action": "detected_no_analysis"
+    },
+    {
+      "sector": "原材料",
+      "direction": "🔴 利空",
+      "stocks": [
+        "MP",
+        "CRML",
+        "XLE",
+        "VLO",
+        "OXY",
+        "FCX",
+        "NEM"
+      ],
+      "key_news": [
+        "Executive summary – Global Critical Minerals Outlook 2026 – Analysis",
+        "Critical Minerals Report (06.14.2026): Control is the New Commodity",
+        "Skyrocketing tungsten prices bruise U.S. manufacturers"
+      ],
+      "detected_at": "2026-07-25T06:13:02.967608+08:00",
+      "action": "detected_no_analysis"
+    }
+  ],
+  "updated_at": "2026-07-25T06:13:32.977126+08:00"
+}

@@ -1,0 +1,179 @@
+{
+  "timestamp": "2026-07-22T20:40:02.903951+08:00",
+  "macro": {
+    "regime": "NORMAL",
+    "regime_emoji": "🟢",
+    "vix": null,
+    "dxy": null,
+    "yield_10y": null,
+    "yield_2y": null,
+    "spread_10y2y": null,
+    "fomc": {
+      "next_meeting": "2026-07-29",
+      "days_until": 7
+    },
+    "warnings": []
+  },
+  "breadth": {
+    "health": "NORMAL",
+    "health_label": "🟡 正常",
+    "pct_above_ma50": 48.5,
+    "pct_above_ma200": 52.9,
+    "advancers": 37,
+    "decliners": 31,
+    "ad_ratio": 1.19,
+    "new_highs": 7,
+    "new_lows": 5,
+    "sector_ranking": [
+      {
+        "sector": "energy",
+        "name": "能源",
+        "stocks": 3,
+        "pct_above_ma50": 100.0,
+        "pct_above_ma200": 100.0
+      },
+      {
+        "sector": "finance",
+        "name": "金融",
+        "stocks": 9,
+        "pct_above_ma50": 88.9,
+        "pct_above_ma200": 88.9
+      },
+      {
+        "sector": "industrial",
+        "name": "工业",
+        "stocks": 7,
+        "pct_above_ma50": 42.9,
+        "pct_above_ma200": 85.7
+      },
+      {
+        "sector": "tech",
+        "name": "科技",
+        "stocks": 14,
+        "pct_above_ma50": 28.6,
+        "pct_above_ma200": 50.0
+      },
+      {
+        "sector": "pharma",
+        "name": "医药",
+        "stocks": 8,
+        "pct_above_ma50": 62.5,
+        "pct_above_ma200": 50.0
+      },
+      {
+        "sector": "resources",
+        "name": "资源",
+        "stocks": 2,
+        "pct_above_ma50": 0.0,
+        "pct_above_ma200": 50.0
+      },
+      {
+        "sector": "ai",
+        "name": "AI/云",
+        "stocks": 10,
+        "pct_above_ma50": 60.0,
+        "pct_above_ma200": 40.0
+      },
+      {
+        "sector": "consumer",
+        "name": "消费",
+        "stocks": 5,
+        "pct_above_ma50": 60.0,
+        "pct_above_ma200": 40.0
+      },
+      {
+        "sector": "defense",
+        "name": "军工",
+        "stocks": 3,
+        "pct_above_ma50": 33.3,
+        "pct_above_ma200": 33.3
+      },
+      {
+        "sector": "telecom",
+        "name": "通讯",
+        "stocks": 2,
+        "pct_above_ma50": 0.0,
+        "pct_above_ma200": 0.0
+      },
+      {
+        "sector": "space",
+        "name": "航天",
+        "stocks": 5,
+        "pct_above_ma50": 0.0,
+        "pct_above_ma200": 0.0
+      }
+    ],
+    "etf_performance": [
+      {
+        "symbol": "XLE",
+        "sector": "energy",
+        "name": "能源",
+        "ret_1m": 8.2
+      },
+      {
+        "symbol": "XLV",
+        "sector": "pharma",
+        "name": "医药",
+        "ret_1m": 6.8
+      },
+      {
+        "symbol": "XLF",
+        "sector": "finance",
+        "name": "金融",
+        "ret_1m": 4.5
+      },
+      {
+        "symbol": "XLC",
+        "sector": "telecom",
+        "name": "通讯",
+        "ret_1m": 3.0
+      },
+      {
+        "symbol": "XLRE",
+        "sector": "realestate",
+        "name": "房地产",
+        "ret_1m": 2.7
+      },
+      {
+        "symbol": "XLP",
+        "sector": "consumer_staples",
+        "name": "必需消费",
+        "ret_1m": 2.3
+      },
+      {
+        "symbol": "XLU",
+        "sector": "utilities",
+        "name": "公用事业",
+        "ret_1m": 0.5
+      },
+      {
+        "symbol": "XLY",
+        "sector": "consumer",
+        "name": "消费",
+        "ret_1m": -0.0
+      },
+      {
+        "symbol": "XLI",
+        "sector": "industrial",
+        "name": "工业",
+        "ret_1m": -1.7
+      },
+      {
+        "symbol": "XLB",
+        "sector": "materials",
+        "name": "原材料",
+        "ret_1m": -3.0
+      },
+      {
+        "symbol": "XLK",
+        "sector": "tech",
+        "name": "科技",
+        "ret_1m": -6.0
+      }
+    ]
+  },
+  "_meta": {
+    "elapsed_s": 60.3,
+    "version": "6.0"
+  }
+}

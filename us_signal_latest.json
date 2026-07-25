@@ -1,0 +1,452 @@
+{
+  "timestamp": "2026-06-08T01:41:31.911027+00:00",
+  "equity": 101794.5,
+  "cash": 65000.65999999999,
+  "results": [
+    {
+      "symbol": "ABBV",
+      "price": 227.09,
+      "change_pct": 0.98,
+      "rsi": 71.6,
+      "ma5": 219.51,
+      "ma20": 213.52,
+      "boll_lower": 201.36,
+      "boll_mid": 213.52,
+      "boll_upper": 225.67,
+      "trend": "\u4e0a\u6da8",
+      "buy_score": 1,
+      "buy_reasons": [
+        "\u5747\u7ebf\u591a\u5934"
+      ],
+      "sell_reason": null,
+      "recent_high": 230.415,
+      "bars_count": 58
+    },
+    {
+      "symbol": "AMAT",
+      "price": 453.07,
+      "change_pct": -9.7,
+      "rsi": 54.5,
+      "ma5": 480.84,
+      "ma20": 446.93,
+      "boll_lower": 397.14,
+      "boll_mid": 446.93,
+      "boll_upper": 496.73,
+      "trend": "\u4e0a\u6da8",
+      "buy_score": 0,
+      "buy_reasons": [],
+      "sell_reason": "\u4ece\u9ad8\u70b9\u56de\u64a411.3%\u2192\u5356\u5168\u90e8",
+      "recent_high": 510.63,
+      "bars_count": 58
+    },
+    {
+      "symbol": "AMD",
+      "price": 466.46,
+      "change_pct": -10.82,
+      "rsi": 58.6,
+      "ma5": 512.68,
+      "ma20": 473.92,
+      "boll_lower": 398.2,
+      "boll_mid": 473.92,
+      "boll_upper": 549.64,
+      "trend": "\u4e0a\u6da8",
+      "buy_score": 0,
+      "buy_reasons": [],
+      "sell_reason": "\u4ece\u9ad8\u70b9\u56de\u64a414.6%\u2192\u5356\u5168\u90e8",
+      "recent_high": 546.18,
+      "bars_count": 58
+    },
+    {
+      "symbol": "BAC",
+      "price": 53.82,
+      "change_pct": -0.54,
+      "rsi": 76.0,
+      "ma5": 52.87,
+      "ma20": 51.4,
+      "boll_lower": 49.1,
+      "boll_mid": 51.4,
+      "boll_upper": 53.7,
+      "trend": "\u4e0a\u6da8",
+      "buy_score": 1,
+      "buy_reasons": [
+        "\u5747\u7ebf\u591a\u5934"
+      ],
+      "sell_reason": null,
+      "recent_high": 54.33,
+      "bars_count": 58
+    },
+    {
+      "symbol": "C",
+      "price": 132.475,
+      "change_pct": -1.97,
+      "rsi": 66.0,
+      "ma5": 131.58,
+      "ma20": 126.4,
+      "boll_lower": 119.44,
+      "boll_mid": 126.4,
+      "boll_upper": 133.37,
+      "trend": "\u4e0a\u6da8",
+      "buy_score": 1,
+      "buy_reasons": [
+        "\u5747\u7ebf\u591a\u5934"
+      ],
+      "sell_reason": null,
+      "recent_high": 135.67,
+      "bars_count": 58
+    },
+    {
+      "symbol": "CAT",
+      "price": 903.99,
+      "change_pct": -3.86,
+      "rsi": 53.2,
+      "ma5": 909.21,
+      "ma20": 895.87,
+      "boll_lower": 849.4,
+      "boll_mid": 895.87,
+      "boll_upper": 942.34,
+      "trend": "\u4e0a\u6da8",
+      "buy_score": 0,
+      "buy_reasons": [],
+      "sell_reason": null,
+      "recent_high": 946.83,
+      "bars_count": 58
+    },
+    {
+      "symbol": "DDOG",
+      "price": 233.995,
+      "change_pct": -3.96,
+      "rsi": 60.6,
+      "ma5": 254.91,
+      "ma20": 224.4,
+      "boll_lower": 180.17,
+      "boll_mid": 224.4,
+      "boll_upper": 268.62,
+      "trend": "\u4e0a\u6da8",
+      "buy_score": 0,
+      "buy_reasons": [],
+      "sell_reason": "\u4ece\u9ad8\u70b9\u56de\u64a416.0%\u2192\u5356\u5168\u90e8",
+      "recent_high": 278.6,
+      "bars_count": 58
+    },
+    {
+      "symbol": "GS",
+      "price": 1038.465,
+      "change_pct": -4.96,
+      "rsi": 65.8,
+      "ma5": 1057.76,
+      "ma20": 992.94,
+      "boll_lower": 901.07,
+      "boll_mid": 992.94,
+      "boll_upper": 1084.8,
+      "trend": "\u4e0a\u6da8",
+      "buy_score": 0,
+      "buy_reasons": [],
+      "sell_reason": null,
+      "recent_high": 1095.69,
+      "bars_count": 58
+    },
+    {
+      "symbol": "JPM",
+      "price": 312.38,
+      "change_pct": 0.48,
+      "rsi": 64.5,
+      "ma5": 304.38,
+      "ma20": 301.84,
+      "boll_lower": 293.1,
+      "boll_mid": 301.84,
+      "boll_upper": 310.57,
+      "trend": "\u4e0a\u6da8",
+      "buy_score": 1,
+      "buy_reasons": [
+        "\u5747\u7ebf\u591a\u5934"
+      ],
+      "sell_reason": null,
+      "recent_high": 314.62,
+      "bars_count": 58
+    },
+    {
+      "symbol": "MA",
+      "price": 491.14,
+      "change_pct": 1.93,
+      "rsi": 47.9,
+      "ma5": 483.65,
+      "ma20": 493.23,
+      "boll_lower": 477.61,
+      "boll_mid": 493.23,
+      "boll_upper": 508.86,
+      "trend": "\u4e0b\u8dcc",
+      "buy_score": 0,
+      "buy_reasons": [],
+      "sell_reason": null,
+      "recent_high": 512.69,
+      "bars_count": 58
+    },
+    {
+      "symbol": "MS",
+      "price": 212.02,
+      "change_pct": -2.85,
+      "rsi": 70.3,
+      "ma5": 213.29,
+      "ma20": 200.99,
+      "boll_lower": 183.79,
+      "boll_mid": 200.99,
+      "boll_upper": 218.19,
+      "trend": "\u4e0a\u6da8",
+      "buy_score": 0,
+      "buy_reasons": [],
+      "sell_reason": null,
+      "recent_high": 219.16,
+      "bars_count": 58
+    },
+    {
+      "symbol": "MU",
+      "price": 865.005,
+      "change_pct": -13.31,
+      "rsi": 60.3,
+      "ma5": 1008.38,
+      "ma20": 849.92,
+      "boll_lower": 600.86,
+      "boll_mid": 849.92,
+      "boll_upper": 1098.98,
+      "trend": "\u4e0a\u6da8",
+      "buy_score": 0,
+      "buy_reasons": [],
+      "sell_reason": "\u4ece\u9ad8\u70b9\u56de\u64a420.6%\u2192\u5356\u5168\u90e8",
+      "recent_high": 1089.15,
+      "bars_count": 58
+    },
+    {
+      "symbol": "NVDA",
+      "price": 205.17,
+      "change_pct": -6.16,
+      "rsi": 34.1,
+      "ma5": 217.18,
+      "ma20": 219.13,
+      "boll_lower": 206.24,
+      "boll_mid": 219.13,
+      "boll_upper": 232.01,
+      "trend": "\u4e0b\u8dcc",
+      "buy_score": 4,
+      "buy_reasons": [
+        "RSI\u8d85\u5356(34.1)",
+        "\u89e6\u53ca\u5e03\u6797\u4e0b\u8f68"
+      ],
+      "sell_reason": "\u4ece\u9ad8\u70b9\u56de\u64a413.3%\u2192\u5356\u5168\u90e8",
+      "recent_high": 236.54,
+      "bars_count": 58
+    },
+    {
+      "symbol": "PANW",
+      "price": 272.16,
+      "change_pct": -2.55,
+      "rsi": 61.7,
+      "ma5": 285.87,
+      "ma20": 253.4,
+      "boll_lower": 202.15,
+      "boll_mid": 253.4,
+      "boll_upper": 304.66,
+      "trend": "\u4e0a\u6da8",
+      "buy_score": 0,
+      "buy_reasons": [],
+      "sell_reason": "\u4ece\u9ad8\u70b9\u56de\u64a410.1%\u2192\u5356\u5168\u90e8",
+      "recent_high": 302.87,
+      "bars_count": 58
+    }
+  ],
+  "state": {
+    "peak_equity": 103240.45,
+    "positions": {
+      "AAPL": {
+        "highest": 311.7199,
+        "trail_trigger": 0
+      },
+      "GOOGL": {
+        "highest": 406.36,
+        "trail_trigger": 0
+      },
+      "JPM": {
+        "highest": 312.37,
+        "trail_trigger": 0
+      },
+      "KO": {
+        "highest": 82.25,
+        "trail_trigger": 0
+      },
+      "MSFT": {
+        "highest": 465.3,
+        "trail_trigger": 0
+      },
+      "NVDA": {
+        "highest": 227.63,
+        "trail_trigger": 0,
+        "cost": 227.63
+      },
+      "TSM": {
+        "highest": 415.1,
+        "trail_trigger": 0
+      },
+      "C": {
+        "highest": 135.6,
+        "trail_trigger": 0
+      },
+      "AMAT": {
+        "highest": 508.05,
+        "trail_trigger": 0
+      },
+      "CSCO": {
+        "highest": 119.92,
+        "trail_trigger": 0
+      },
+      "BLK": {
+        "highest": 1089.995,
+        "trail_trigger": 0
+      },
+      "GS": {
+        "highest": 1092.16,
+        "trail_trigger": 0
+      },
+      "WMT": {
+        "highest": 119.845,
+        "trail_trigger": 0
+      },
+      "PEP": {
+        "highest": 150.57,
+        "trail_trigger": 0
+      },
+      "BA": {
+        "highest": 223.97,
+        "trail_trigger": 0
+      },
+      "COST": {
+        "highest": 996.96,
+        "trail_trigger": 0
+      },
+      "ORCL": {
+        "highest": 245.065,
+        "trail_trigger": 0
+      },
+      "QCOM": {
+        "highest": 249.4,
+        "trail_trigger": 0
+      },
+      "AMD": {
+        "highest": 542.0568,
+        "trail_trigger": 0
+      },
+      "CRM": {
+        "highest": 181.0,
+        "trail_trigger": 0
+      },
+      "IBM": {
+        "highest": 324.055,
+        "trail_trigger": 0
+      },
+      "INTC": {
+        "highest": 121.56,
+        "trail_trigger": 0
+      },
+      "V": {
+        "highest": 330.21,
+        "trail_trigger": 0
+      },
+      "BAC": {
+        "highest": 54.09,
+        "trail_trigger": 0
+      },
+      "CAT": {
+        "highest": 935.0,
+        "trail_trigger": 0,
+        "cost": 898.0
+      },
+      "MA": {
+        "highest": 491.99,
+        "trail_trigger": 0
+      },
+      "MS": {
+        "highest": 218.3,
+        "trail_trigger": 0
+      },
+      "META": {
+        "highest": 638.8,
+        "trail_trigger": 0
+      },
+      "ABBV": {
+        "highest": 227.23,
+        "trail_trigger": 0
+      },
+      "DDOG": {
+        "highest": 234.25,
+        "trail_trigger": 0
+      },
+      "MU": {
+        "highest": 893.81,
+        "trail_trigger": 0
+      },
+      "PANW": {
+        "highest": 272.05,
+        "trail_trigger": 0
+      }
+    },
+    "paused_drawdown": false,
+    "report_date": "2026-06-08",
+    "take_profit_rule": "tiered_20_35_trail",
+    "tiered_tp": {
+      "level_1": {
+        "trigger_pct": 20,
+        "sell_ratio": 0.33,
+        "action": "\u9501\u5229 1/3"
+      },
+      "level_2": {
+        "trigger_pct": 35,
+        "sell_ratio": 0.33,
+        "action": "\u518d\u9501 1/3"
+      },
+      "level_3": {
+        "action": "\u79fb\u52a8\u6b62\u635f 5% \u8dd1\u6700\u540e 1/3"
+      }
+    },
+    "hard_stop_pct": 0.05,
+    "trail_stop_pct": 0.05,
+    "note": "2026-06-01 \u5207\u6362\uff1a15% \u5355\u4e00\u6b62\u76c8 \u2192 20%/35% \u9636\u68af + \u79fb\u52a8\u6b62\u635f",
+    "AMAT_tp1_done": false,
+    "AMAT_tp2_done": false,
+    "ORCL_tp1_done": true,
+    "ORCL_tp2_done": false,
+    "trade_log": [
+      {
+        "time": "2026-06-02T00:41:57+08:00",
+        "action": "sell ORCL x3 @ $245 (tier 1 +20%)",
+        "reason": "rsi 76.2 + \u6d6e\u76c8 27.5% > tier 1 (20%)"
+      },
+      {
+        "time": "2026-06-02T00:44:34+08:00",
+        "action": "buy AMAT x3 @ $459.33",
+        "reason": "fear-bias \u5f3a\u5236\u56de\u8865: \u4ed3\u4f4d 18.7% < 30% defensive, sell\u2192buy \u914d\u5bf9, AMAT score 15.8 (\u975e\u6301\u4ed3\u6700\u9ad8), \u6570\u636e\u4e2d\u5fc3 capex $500B + NVDA \u677f\u5757\u8f6e\u52a8 + \u4e0a\u534a\u533a 96%"
+      },
+      {
+        "time": "2026-06-02T22:32:00+08:00",
+        "action": "buy NVDA x1 @ $227.63",
+        "reason": "\u6050\u60e7\u504f\u8bef\u5f3a\u5236\u56de\u8865: cash 85% > 60%, drawdown 0%, \u975e defensive. NVDA RSI 62.8 \u5065\u5eb7, score 18.6, AI \u7b97\u529b\u9700\u6c42\u5229\u597d"
+      },
+      {
+        "time": "2026-06-02T22:32:00+08:00",
+        "action": "buy CAT x1 @ $898.00",
+        "reason": "\u6050\u60e7\u504f\u8bef\u5f3a\u5236\u56de\u8865: cash 85% > 60%, drawdown 0%, \u975e defensive. CAT RSI 56.5 \u5408\u7406, score 18.5, \u5de5\u4e1a\u9f99\u5934+\u9e70\u6d3e\u627f\u538b\u4e2d\u6027"
+      },
+      {
+        "time": "2026-06-02T22:32:00+08:00",
+        "action": "place NVDA stop @ $216.25 (-5% from cost)",
+        "reason": "\u786c\u6b62\u635f \u00a78.1 \u98ce\u63a7"
+      },
+      {
+        "time": "2026-06-02T22:32:00+08:00",
+        "action": "place CAT stop @ $853.10 (-5% from cost)",
+        "reason": "\u786c\u6b62\u635f \u00a78.1 \u98ce\u63a7"
+      }
+    ],
+    "ORCL_tp1_executed_at": "2026-06-03T13:23:16Z",
+    "ORCL_tp1_locked_profit": 50.09,
+    "ORCL_tp1_sell_qty": 1,
+    "ORCL_tp1_sell_price_est": 241.82
+  }
+}

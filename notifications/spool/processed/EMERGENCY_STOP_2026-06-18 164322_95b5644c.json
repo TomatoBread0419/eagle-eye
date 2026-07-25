@@ -1,0 +1,9 @@
+{
+  "event_type": "EMERGENCY_STOP",
+  "timestamp": "2026-06-18T08:43:22.955506+00:00",
+  "bj_time": "2026-06-18 16:43:22",
+  "details": {
+    "reason": "Test: drawdown simulation"
+  },
+  "level": "critical"
+}

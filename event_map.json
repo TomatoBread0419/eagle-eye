@@ -1,0 +1,71 @@
+{
+  "半导体/AI": {
+    "stocks": [
+      "NVDA",
+      "TSM",
+      "AMD",
+      "AVGO",
+      "INTC",
+      "MRVL",
+      "QCOM",
+      "TXN"
+    ],
+    "direction_rule": "利多→做多，制裁/出口管制→回避",
+    "style": "chain"
+  },
+  "地缘/台海": {
+    "stocks": [
+      "LMT",
+      "RTX",
+      "NOC",
+      "MP",
+      "CRML",
+      "GLD",
+      "GDX"
+    ],
+    "direction_rule": "紧张升级→军工/稀土/黄金做多，缓和→减仓",
+    "style": "geo"
+  },
+  "原材料": {
+    "stocks": [
+      "MP",
+      "CRML",
+      "XLE",
+      "VLO",
+      "OXY",
+      "FCX",
+      "NEM"
+    ],
+    "direction_rule": "价格暴涨/禁运→替代链做多",
+    "style": "geo"
+  },
+  "加密货币": {
+    "stocks": [
+      "MSTR",
+      "COIN",
+      "MARA",
+      "RIOT"
+    ],
+    "direction_rule": "BTC突破→做多，监管打压→回避",
+    "style": "chain"
+  },
+  "美股大盘": {
+    "stocks": [],
+    "direction_rule": "宏观指标，不直接产生交易",
+    "style": "policy"
+  },
+  "美联储": {
+    "stocks": [],
+    "direction_rule": "宏观指标，不直接产生交易",
+    "style": "policy"
+  },
+  "太空": {
+    "stocks": [
+      "RKLB",
+      "ASTS",
+      "RDW"
+    ],
+    "direction_rule": "SpaceX/蓝色起源重大事件→产业链做多",
+    "style": "chain"
+  }
+}

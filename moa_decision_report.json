@@ -1,0 +1,291 @@
+{
+  "timestamp": "2026-07-08T21:16:10.681912+08:00",
+  "phase": "P4-MoA-decision-chain",
+  "constitution": "3/3 ACTIVE",
+  "account": {
+    "equity": 103317.76,
+    "utilization": 0.492,
+    "target_util": 0.5,
+    "gap_dollars": 829.28,
+    "drawdown": 0.0286
+  },
+  "positions": {
+    "count": 17,
+    "held": [
+      {
+        "symbol": "ABBV",
+        "sector": "pharma",
+        "plpc": 0.1024,
+        "weight": 0.0375,
+        "stop_distance": 0.1655,
+        "status": "normal"
+      },
+      {
+        "symbol": "AMAT",
+        "sector": "tech",
+        "plpc": -0.0598,
+        "weight": 0.0598,
+        "stop_distance": 0.0215,
+        "status": "normal"
+      },
+      {
+        "symbol": "AMD",
+        "sector": "tech",
+        "plpc": 0.0408,
+        "weight": 0.0516,
+        "stop_distance": 0.116,
+        "status": "normal"
+      },
+      {
+        "symbol": "BAC",
+        "sector": "finance",
+        "plpc": 0.0158,
+        "weight": 0.0205,
+        "stop_distance": 0.0943,
+        "status": "normal"
+      },
+      {
+        "symbol": "C",
+        "sector": "finance",
+        "plpc": 0.0169,
+        "weight": 0.0211,
+        "stop_distance": 0.0952,
+        "status": "normal"
+      },
+      {
+        "symbol": "COHR",
+        "sector": "other",
+        "plpc": -0.0096,
+        "weight": 0.0252,
+        "stop_distance": 0.0711,
+        "status": "normal"
+      },
+      {
+        "symbol": "DDOG",
+        "sector": "ai",
+        "plpc": 0.0399,
+        "weight": 0.0252,
+        "stop_distance": 0.1153,
+        "status": "normal"
+      },
+      {
+        "symbol": "DIS",
+        "sector": "consumer",
+        "plpc": -0.0496,
+        "weight": 0.019,
+        "stop_distance": 0.032,
+        "status": "normal"
+      },
+      {
+        "symbol": "GSAT",
+        "sector": "other",
+        "plpc": -0.0109,
+        "weight": 0.0233,
+        "stop_distance": 0.0699,
+        "status": "normal"
+      },
+      {
+        "symbol": "INTC",
+        "sector": "tech",
+        "plpc": -0.0498,
+        "weight": 0.0092,
+        "stop_distance": 0.0318,
+        "status": "normal"
+      },
+      {
+        "symbol": "JPM",
+        "sector": "finance",
+        "plpc": 0.0362,
+        "weight": 0.0099,
+        "stop_distance": 0.1121,
+        "status": "normal"
+      },
+      {
+        "symbol": "KO",
+        "sector": "consumer",
+        "plpc": 0.0317,
+        "weight": 0.0203,
+        "stop_distance": 0.1083,
+        "status": "normal"
+      },
+      {
+        "symbol": "LMT",
+        "sector": "defense",
+        "plpc": 0.0027,
+        "weight": 0.0157,
+        "stop_distance": 0.0825,
+        "status": "normal"
+      },
+      {
+        "symbol": "MU",
+        "sector": "tech",
+        "plpc": -0.0309,
+        "weight": 0.0907,
+        "stop_distance": 0.0507,
+        "status": "normal"
+      },
+      {
+        "symbol": "SBUX",
+        "sector": "consumer",
+        "plpc": 0.0171,
+        "weight": 0.0119,
+        "stop_distance": 0.0954,
+        "status": "normal"
+      },
+      {
+        "symbol": "SNOW",
+        "sector": "ai",
+        "plpc": 0.043,
+        "weight": 0.0308,
+        "stop_distance": 0.1179,
+        "status": "normal"
+      },
+      {
+        "symbol": "UNH",
+        "sector": "pharma",
+        "plpc": 0.038,
+        "weight": 0.0203,
+        "stop_distance": 0.1137,
+        "status": "normal"
+      }
+    ]
+  },
+  "scanner": {
+    "top10": [
+      {
+        "symbol": "DDOG",
+        "score": 45.9,
+        "price": 256.71,
+        "sector": "ai"
+      },
+      {
+        "symbol": "MU",
+        "score": 44.2,
+        "price": 937.52,
+        "sector": "tech"
+      },
+      {
+        "symbol": "PANW",
+        "score": 41.5,
+        "price": 337.05,
+        "sector": "ai"
+      },
+      {
+        "symbol": "AMD",
+        "score": 40.7,
+        "price": 518.2,
+        "sector": "tech"
+      },
+      {
+        "symbol": "SNOW",
+        "score": 32.4,
+        "price": 262.81,
+        "sector": "ai"
+      },
+      {
+        "symbol": "INTC",
+        "score": 31.2,
+        "price": 110.35,
+        "sector": "tech"
+      },
+      {
+        "symbol": "UNH",
+        "score": 29.2,
+        "price": 428.05,
+        "sector": "pharma"
+      },
+      {
+        "symbol": "AMAT",
+        "score": 27.2,
+        "price": 554.17,
+        "sector": "tech"
+      },
+      {
+        "symbol": "DASH",
+        "score": 26.6,
+        "price": 195.8,
+        "sector": "ai"
+      },
+      {
+        "symbol": "BAC",
+        "score": 26.1,
+        "price": 59.85,
+        "sector": "finance"
+      }
+    ],
+    "buy_candidates": [
+      "SNOW",
+      "DASH",
+      "LLY",
+      "IBM",
+      "MS",
+      "JPM",
+      "MA",
+      "KO",
+      "TMO",
+      "MRK"
+    ],
+    "critical_alerts": [
+      "🔴 地缘/台海: 🔴 利空 [war,conflict]"
+    ]
+  },
+  "sector": {
+    "allocation": {
+      "pharma": {
+        "count": 2,
+        "market_value": 5973.91,
+        "weight": 0.0578,
+        "pl": 436.61
+      },
+      "tech": {
+        "count": 4,
+        "market_value": 21826.45,
+        "weight": 0.2113,
+        "pl": -532.49
+      },
+      "finance": {
+        "count": 3,
+        "market_value": 5320.67,
+        "weight": 0.0515,
+        "pl": 104.8
+      },
+      "other": {
+        "count": 2,
+        "market_value": 5009.2,
+        "weight": 0.0485,
+        "pl": -51.6
+      },
+      "ai": {
+        "count": 2,
+        "market_value": 5786.68,
+        "weight": 0.056,
+        "pl": 231.06
+      },
+      "consumer": {
+        "count": 3,
+        "market_value": 5287.77,
+        "weight": 0.0512,
+        "pl": -17.06
+      },
+      "defense": {
+        "count": 1,
+        "market_value": 1624.92,
+        "weight": 0.0157,
+        "pl": 4.41
+      }
+    },
+    "gaps": {
+      "energy": {
+        "current_weight": 0,
+        "target_weight": 0.03,
+        "gap_dollars": 3099.53
+      }
+    }
+  },
+  "risk_flags": [
+    "tech 板块占比 21% 过重（>20%）",
+    "AMAT 距止损仅 2.1%",
+    "AMAT 浮亏 -6.0%"
+  ],
+  "events_summary": "unknown"
+}

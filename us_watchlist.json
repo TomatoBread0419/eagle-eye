@@ -1,0 +1,466 @@
+{
+  "timestamp": "2026-07-24T08:04:45.107400",
+  "total_scanned": 327,
+  "success": 208,
+  "errors": 0,
+  "market_narrative": "neutral",
+  "is_defensive": false,
+  "sector_gaps": {},
+  "buy_candidates": [
+    "AMD",
+    "UNP",
+    "CTAS",
+    "LMT",
+    "HPE",
+    "CHRW",
+    "WAT",
+    "MRK",
+    "TRGP",
+    "AAPL"
+  ],
+  "top10": [
+    "SNOW",
+    "DELL",
+    "PANW",
+    "HUM",
+    "DDOG",
+    "VLO",
+    "TMO",
+    "PSX",
+    "AMD",
+    "CSX"
+  ],
+  "all_ranked": [
+    {
+      "symbol": "SNOW",
+      "score": 38.0,
+      "price": 265.08,
+      "sector": "ai"
+    },
+    {
+      "symbol": "DELL",
+      "score": 34.0,
+      "price": 439.14,
+      "sector": "tech"
+    },
+    {
+      "symbol": "PANW",
+      "score": 32.4,
+      "price": 325.76,
+      "sector": "tech"
+    },
+    {
+      "symbol": "HUM",
+      "score": 32.3,
+      "price": 394.51,
+      "sector": "pharma"
+    },
+    {
+      "symbol": "DDOG",
+      "score": 31.3,
+      "price": 244.43,
+      "sector": "tech"
+    },
+    {
+      "symbol": "VLO",
+      "score": 29.6,
+      "price": 305.32,
+      "sector": "energy"
+    },
+    {
+      "symbol": "TMO",
+      "score": 29.2,
+      "price": 572.46,
+      "sector": "pharma"
+    },
+    {
+      "symbol": "PSX",
+      "score": 28.8,
+      "price": 206.92,
+      "sector": "energy"
+    },
+    {
+      "symbol": "AMD",
+      "score": 27.7,
+      "price": 555.2,
+      "sector": "tech"
+    },
+    {
+      "symbol": "CSX",
+      "score": 26.5,
+      "price": 52.79,
+      "sector": "industrial"
+    },
+    {
+      "symbol": "RTX",
+      "score": 25.8,
+      "price": 209.09,
+      "sector": "industrial"
+    },
+    {
+      "symbol": "MU",
+      "score": 25.3,
+      "price": 994.98,
+      "sector": "tech"
+    },
+    {
+      "symbol": "UNP",
+      "score": 24.8,
+      "price": 303.95,
+      "sector": "industrial"
+    },
+    {
+      "symbol": "MPC",
+      "score": 24.2,
+      "price": 312.24,
+      "sector": "energy"
+    },
+    {
+      "symbol": "NET",
+      "score": 22.7,
+      "price": 262.36,
+      "sector": "ai"
+    },
+    {
+      "symbol": "CTAS",
+      "score": 22.4,
+      "price": 203.24,
+      "sector": "industrial"
+    },
+    {
+      "symbol": "LMT",
+      "score": 21.9,
+      "price": 567.78,
+      "sector": "industrial"
+    },
+    {
+      "symbol": "HPE",
+      "score": 21.0,
+      "price": 47.66,
+      "sector": "tech"
+    },
+    {
+      "symbol": "CHRW",
+      "score": 20.9,
+      "price": 205.52,
+      "sector": "industrial"
+    },
+    {
+      "symbol": "WAT",
+      "score": 18.8,
+      "price": 382.35,
+      "sector": "pharma"
+    }
+  ],
+  "kelly_allocations": {
+    "AMD": {
+      "kelly_pct": 0.0604,
+      "win_prob": 0.627,
+      "odds": 1.57,
+      "score": 27.7
+    },
+    "UNP": {
+      "kelly_pct": 0.0392,
+      "win_prob": 0.5925,
+      "odds": 1.2,
+      "score": 24.8
+    },
+    "CTAS": {
+      "kelly_pct": 0.0309,
+      "win_prob": 0.5633,
+      "odds": 1.2,
+      "score": 22.4
+    },
+    "LMT": {
+      "kelly_pct": 0.0292,
+      "win_prob": 0.5571,
+      "odds": 1.2,
+      "score": 21.9
+    },
+    "HPE": {
+      "kelly_pct": 0.0365,
+      "win_prob": 0.546,
+      "odds": 1.46,
+      "score": 21.0
+    },
+    "CHRW": {
+      "kelly_pct": 0.0257,
+      "win_prob": 0.5448,
+      "odds": 1.2,
+      "score": 20.9
+    },
+    "WAT": {
+      "kelly_pct": 0.0182,
+      "win_prob": 0.5186,
+      "odds": 1.2,
+      "score": 18.8
+    },
+    "MRK": {
+      "kelly_pct": 0.0178,
+      "win_prob": 0.5174,
+      "odds": 1.2,
+      "score": 18.7
+    },
+    "TRGP": {
+      "kelly_pct": 0.0168,
+      "win_prob": 0.5136,
+      "odds": 1.2,
+      "score": 18.4
+    },
+    "AAPL": {
+      "kelly_pct": 0.0147,
+      "win_prob": 0.5061,
+      "odds": 1.2,
+      "score": 17.8
+    },
+    "HON": {
+      "kelly_pct": 0.0147,
+      "win_prob": 0.5061,
+      "odds": 1.2,
+      "score": 17.8
+    },
+    "ABBV": {
+      "kelly_pct": 0.0135,
+      "win_prob": 0.4974,
+      "odds": 1.2,
+      "score": 17.1
+    },
+    "ABT": {
+      "kelly_pct": 0.0135,
+      "win_prob": 0.4811,
+      "odds": 1.2,
+      "score": 15.8
+    },
+    "BMY": {
+      "kelly_pct": 0.0135,
+      "win_prob": 0.4811,
+      "odds": 1.2,
+      "score": 15.8
+    },
+    "NU": {
+      "kelly_pct": 0.0135,
+      "win_prob": 0.4799,
+      "odds": 1.26,
+      "score": 15.7
+    },
+    "IR": {
+      "kelly_pct": 0.0135,
+      "win_prob": 0.4749,
+      "odds": 1.2,
+      "score": 15.3
+    },
+    "JNJ": {
+      "kelly_pct": 0.0135,
+      "win_prob": 0.4712,
+      "odds": 1.2,
+      "score": 15.0
+    },
+    "AON": {
+      "kelly_pct": 0.0135,
+      "win_prob": 0.4649,
+      "odds": 1.2,
+      "score": 14.5
+    },
+    "JPM": {
+      "kelly_pct": 0.0135,
+      "win_prob": 0.4637,
+      "odds": 1.2,
+      "score": 14.4
+    },
+    "STX": {
+      "kelly_pct": 0.02,
+      "win_prob": 0.4587,
+      "odds": 1.64,
+      "score": 14.0
+    },
+    "HPQ": {
+      "kelly_pct": 0.0135,
+      "win_prob": 0.4562,
+      "odds": 1.27,
+      "score": 13.8
+    },
+    "USB": {
+      "kelly_pct": 0.0135,
+      "win_prob": 0.45,
+      "odds": 1.2,
+      "score": 13.3
+    },
+    "MA": {
+      "kelly_pct": 0.0135,
+      "win_prob": 0.4488,
+      "odds": 1.2,
+      "score": 13.2
+    },
+    "HWM": {
+      "kelly_pct": 0.0135,
+      "win_prob": 0.4402,
+      "odds": 1.2,
+      "score": 12.5
+    },
+    "UPS": {
+      "kelly_pct": 0.0135,
+      "win_prob": 0.4389,
+      "odds": 1.2,
+      "score": 12.4
+    },
+    "NOC": {
+      "kelly_pct": 0.0135,
+      "win_prob": 0.434,
+      "odds": 1.2,
+      "score": 12.0
+    },
+    "ODFL": {
+      "kelly_pct": 0.0135,
+      "win_prob": 0.4316,
+      "odds": 1.2,
+      "score": 11.8
+    },
+    "MCK": {
+      "kelly_pct": 0.0135,
+      "win_prob": 0.4291,
+      "odds": 1.2,
+      "score": 11.6
+    },
+    "PLD": {
+      "kelly_pct": 0.0135,
+      "win_prob": 0.4193,
+      "odds": 1.2,
+      "score": 10.8
+    },
+    "MMM": {
+      "kelly_pct": 0.0135,
+      "win_prob": 0.4181,
+      "odds": 1.2,
+      "score": 10.7
+    },
+    "CFG": {
+      "kelly_pct": 0.0135,
+      "win_prob": 0.4169,
+      "odds": 1.2,
+      "score": 10.6
+    },
+    "HST": {
+      "kelly_pct": 0.0135,
+      "win_prob": 0.4036,
+      "odds": 1.2,
+      "score": 9.5
+    },
+    "ICE": {
+      "kelly_pct": 0.0135,
+      "win_prob": 0.4024,
+      "odds": 1.2,
+      "score": 9.4
+    },
+    "NVDA": {
+      "kelly_pct": 0.0135,
+      "win_prob": 0.4012,
+      "odds": 1.24,
+      "score": 9.3
+    },
+    "WFC": {
+      "kelly_pct": 0.0135,
+      "win_prob": 0.3976,
+      "odds": 1.2,
+      "score": 9.0
+    },
+    "CME": {
+      "kelly_pct": 0.0135,
+      "win_prob": 0.3952,
+      "odds": 1.2,
+      "score": 8.8
+    },
+    "ETN": {
+      "kelly_pct": 0.0135,
+      "win_prob": 0.3881,
+      "odds": 1.25,
+      "score": 8.2
+    },
+    "DVN": {
+      "kelly_pct": 0.0135,
+      "win_prob": 0.3857,
+      "odds": 1.2,
+      "score": 8.0
+    },
+    "GILD": {
+      "kelly_pct": 0.0135,
+      "win_prob": 0.381,
+      "odds": 1.2,
+      "score": 7.6
+    },
+    "SO": {
+      "kelly_pct": 0.0135,
+      "win_prob": 0.3786,
+      "odds": 1.2,
+      "score": 7.4
+    },
+    "ANET": {
+      "kelly_pct": 0.0135,
+      "win_prob": 0.3774,
+      "odds": 1.46,
+      "score": 7.3
+    },
+    "WMB": {
+      "kelly_pct": 0.0135,
+      "win_prob": 0.3774,
+      "odds": 1.2,
+      "score": 7.3
+    },
+    "BLK": {
+      "kelly_pct": 0.0135,
+      "win_prob": 0.3762,
+      "odds": 1.2,
+      "score": 7.2
+    },
+    "GS": {
+      "kelly_pct": 0.0135,
+      "win_prob": 0.3646,
+      "odds": 1.23,
+      "score": 6.2
+    },
+    "GM": {
+      "kelly_pct": 0.0135,
+      "win_prob": 0.36,
+      "odds": 1.2,
+      "score": 5.8
+    },
+    "NEE": {
+      "kelly_pct": 0.0135,
+      "win_prob": 0.3588,
+      "odds": 1.2,
+      "score": 5.7
+    },
+    "ROST": {
+      "kelly_pct": 0.0135,
+      "win_prob": 0.3565,
+      "odds": 1.2,
+      "score": 5.5
+    },
+    "XEL": {
+      "kelly_pct": 0.0135,
+      "win_prob": 0.3554,
+      "odds": 1.2,
+      "score": 5.4
+    },
+    "AVGO": {
+      "kelly_pct": 0.0135,
+      "win_prob": 0.344,
+      "odds": 1.29,
+      "score": 4.4
+    },
+    "LSCC": {
+      "kelly_pct": 0.0135,
+      "win_prob": 0.3373,
+      "odds": 1.41,
+      "score": 3.8
+    },
+    "PFE": {
+      "kelly_pct": 0.0135,
+      "win_prob": 0.3328,
+      "odds": 1.2,
+      "score": 3.4
+    }
+  },
+  "critical_alerts": [
+    "\ud83d\udd34 \u5730\u7f18/\u53f0\u6d77: \ud83d\udd34 \u5229\u7a7a [war,conflict]"
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "timestamp": "2026-06-18T21:04:59.810910+08:00",
+  "holdings": 6,
+  "summary": {
+    "critical": 0,
+    "warning": 2,
+    "watch": 0,
+    "clean": 4,
+    "error": 0
+  },
+  "alerts": [
+    {
+      "symbol": "AMAT",
+      "level": "warning",
+      "code": "RSI_OVERHEAT",
+      "message": "RSI=75.6 过热，做好止盈准备"
+    },
+    {
+      "symbol": "JPM",
+      "level": "warning",
+      "code": "RSI_OVERHEAT",
+      "message": "RSI=84.3 过热，做好止盈准备"
+    }
+  ],
+  "checks": [
+    {
+      "symbol": "AMAT",
+      "current": 592.73,
+      "avg_entry": 568.68,
+      "pnl_pct": 9.3,
+      "rsi14": 75.6,
+      "ma20": 492.42,
+      "ma50": 441.03,
+      "macd_crossover": null,
+      "decay_level": "WARNING",
+      "signals": [
+        {
+          "type": "warning",
+          "code": "RSI_OVERHEAT",
+          "message": "RSI=75.6 过热，做好止盈准备",
+          "rsi": 75.6
+        }
+      ]
+    },
+    {
+      "symbol": "ARM",
+      "current": 419.29,
+      "avg_entry": 408.97,
+      "pnl_pct": 6.4,
+      "rsi14": 62.2,
+      "ma20": 353.14,
+      "ma50": 258.72,
+      "macd_crossover": "golden",
+      "decay_level": "CLEAN",
+      "signals": []
+    },
+    {
+      "symbol": "GS",
+      "current": 1098.77,
+      "avg_entry": 1029.43,
+      "pnl_pct": 8.4,
+      "rsi14": 63.6,
+      "ma20": 1036.26,
+      "ma50": 970.17,
+      "macd_crossover": "golden",
+      "decay_level": "CLEAN",
+      "signals": []
+    },
+    {
+      "symbol": "JPM",
+      "current": 333.56,
+      "avg_entry": 329.44,
+      "pnl_pct": 2.0,
+      "rsi14": 84.3,
+      "ma20": 309.33,
+      "ma50": 308.53,
+      "macd_crossover": null,
+      "decay_level": "WARNING",
+      "signals": [
+        {
+          "type": "warning",
+          "code": "RSI_OVERHEAT",
+          "message": "RSI=84.3 过热，做好止盈准备",
+          "rsi": 84.3
+        }
+      ]
+    },
+    {
+      "symbol": "MU",
+      "current": 1043.95,
+      "avg_entry": 1032.97,
+      "pnl_pct": 6.0,
+      "rsi14": 57.3,
+      "ma20": 945.69,
+      "ma50": 718.31,
+      "macd_crossover": null,
+      "decay_level": "CLEAN",
+      "signals": []
+    },
+    {
+      "symbol": "PANW",
+      "current": 282.11,
+      "avg_entry": 278.25,
+      "pnl_pct": 1.5,
+      "rsi14": 60.8,
+      "ma20": 271.51,
+      "ma50": 222.31,
+      "macd_crossover": null,
+      "decay_level": "CLEAN",
+      "signals": []
+    }
+  ]
+}

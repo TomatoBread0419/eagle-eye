@@ -1,0 +1,14 @@
+{
+  "regime": "NORMAL",
+  "regime_emoji": "🟢",
+  "vix": null,
+  "dxy": null,
+  "yield_10y": null,
+  "yield_2y": null,
+  "spread_10y2y": null,
+  "fomc": {
+    "next_meeting": "2026-07-29",
+    "days_until": 7
+  },
+  "warnings": []
+}

@@ -1,0 +1,151 @@
+#!/usr/bin/env python3
+"""
+🦅 Eagle Eye — 美股智能交易系统 v6
+用法:
+  eagle-eye report      — 生成决策报告
+  eagle-eye scan        — 运行扫描器
+  eagle-eye portfolio   — 持仓分析
+  eagle-eye stops       — 止损/止盈管理
+  eagle-eye execute     — 执行订单 (从 stdin 读 JSON)
+  eagle-eye calibrate   — 参数自校准 (每周六)
+  eagle-eye audit       — 规则合规审计
+  eagle-eye status      — 系统状态总览
+  eagle-eye help        — 帮助
+"""
+import sys, os, subprocess, json
+
+HOME = os.path.expanduser('~')
+SCRIPTS = f'{HOME}/.hermes/scripts'
+PYTHON = 'python3'
+
+COMMANDS = {
+    'report': f'{SCRIPTS}/us_report.py',
+    'scan': f'{SCRIPTS}/us_screener.py',
+    'portfolio': f'{SCRIPTS}/us_portfolio.py',
+    'trader': f'{SCRIPTS}/us_trader.py',
+    'calibrate': f'{SCRIPTS}/calibrator.py',
+    'audit': f'{SCRIPTS}/compliance_audit.py',
+    'moa': f'{HOME}/stock_trader/moa_decision.py',
+    'constitution': f'{HOME}/eagle_eye/ops/constitution.py',
+}
+
+def run_script(script, args=None):
+    cmd = [PYTHON, script] + (args or [])
+    result = subprocess.run(cmd, capture_output=False, text=True, timeout=300)
+    return result.returncode
+
+def show_status():
+    """系统状态总览"""
+    print('🦅 Eagle Eye 系统状态')
+    print('='*40)
+    
+    # 检查文件是否存在
+    files = {
+        '持仓分析器': f'{SCRIPTS}/us_portfolio.py',
+        '扫描器 v2': f'{SCRIPTS}/us_screener.py',
+        '执行器': f'{SCRIPTS}/us_trader.py',
+        '决策报告': f'{SCRIPTS}/us_report.py',
+        '共享模块': f'{SCRIPTS}/us_common.py',
+        '新闻收集': f'{SCRIPTS}/market_news.py',
+        '参数校准器': f'{SCRIPTS}/calibrator.py',
+        '合规审计': f'{SCRIPTS}/compliance_audit.py',
+    }
+    
+    print('\n组件:')
+    for name, path in files.items():
+        exists = '✅' if os.path.exists(path) else '❌'
+        print(f'  {exists} {name}: {os.path.basename(path)}')
+    
+    # 检查数据文件
+    data_dir = f'{HOME}/stock_trader'
+    data_files = {
+        '持仓数据': f'{data_dir}/us_portfolio.json',
+        '扫描结果': f'{data_dir}/us_watchlist.json',
+        '市场事件': f'{data_dir}/market_events_latest.json',
+        '风控状态': f'{data_dir}/us_risk_state.json',
+        '校准参数': f'{data_dir}/calibrated_params.json',
+        '合规报告': f'{data_dir}/compliance_report.json',
+    }
+    
+    print('\n数据:')
+    for name, path in data_files.items():
+        if os.path.exists(path):
+            mtime = os.path.getmtime(path)
+            from datetime import datetime
+            age = datetime.now() - datetime.fromtimestamp(mtime)
+            hours = age.total_seconds() / 3600
+            if hours < 1:
+                age_str = f'{age.total_seconds()/60:.0f}分钟前'
+            elif hours < 24:
+                age_str = f'{hours:.1f}小时前'
+            else:
+                age_str = f'{hours/24:.1f}天前'
+            print(f'  ✅ {name}: 更新于 {age_str}')
+        else:
+            print(f'  ❌ {name}: 不存在')
+    
+    print('\n定时任务:')
+    print('  📊 美股AI决策: 每小时 21:10-05:10 工作日')
+    print('  🔍 GARP扫描: 每日 08:00 工作日')
+    print('  📰 市场事件: 每2小时 09:00-17:00 工作日')
+    print('  📋 早间速报: 每日 09:00 工作日')
+    print('  📋 午间速报: 每日 12:00 工作日')
+    print('  📋 盘后扫描: 每日 06:00 工作日')
+
+def show_help():
+    print(__doc__)
+    print('\n示例:')
+    print('  eagle-eye report         # 生成 AI 决策报告')
+    print('  eagle-eye scan           # 运行扫描器')
+    print('  eagle-eye portfolio      # 持仓分析')
+    print('  eagle-eye stops          # 止损/止盈管理')
+    print('  eagle-eye status         # 系统状态')
+    print('\n执行订单:')
+    print("  eagle-eye execute '{\"orders\": [{\"symbol\": \"LMT\", \"qty\": 3, \"side\": \"buy\"}]}'")
+    print('\n或直接:')
+    print('  python3 ~/.hermes/scripts/us_trader.py --execute \'{"orders": [...]}\'')
+    print('  python3 ~/.hermes/scripts/us_trader.py --report')
+    print('  python3 ~/.hermes/scripts/us_trader.py --stops')
+
+if __name__ == '__main__':
+    if len(sys.argv) < 2:
+        show_help()
+        sys.exit(0)
+    
+    cmd = sys.argv[1].lower()
+    
+    if cmd == 'help' or cmd == '--help' or cmd == '-h':
+        show_help()
+    elif cmd == 'status':
+        show_status()
+    elif cmd == 'report':
+        run_script(COMMANDS['report'])
+    elif cmd == 'scan':
+        run_script(COMMANDS['scan'])
+    elif cmd == 'portfolio':
+        run_script(COMMANDS['portfolio'])
+    elif cmd == 'stops':
+        run_script(COMMANDS['trader'], ['--stops'])
+    elif cmd == 'execute':
+        if len(sys.argv) < 3:
+            # 从 stdin 读
+            orders = sys.stdin.read().strip()
+            if orders:
+                run_script(COMMANDS['trader'], ['--execute', orders])
+            else:
+                print('用法: eagle-eye execute \'{"orders": [...]}\'')
+                print('或:   echo \'{"orders": [...]}\' | eagle-eye execute')
+        else:
+            run_script(COMMANDS['trader'], ['--execute', sys.argv[2]])
+    elif cmd == 'calibrate':
+        run_script(COMMANDS['calibrate'])
+    elif cmd == 'audit':
+        run_script(COMMANDS['audit'])
+    elif cmd == 'moa':
+        run_script(COMMANDS['moa'])
+    elif cmd == 'constitution':
+        run_script(COMMANDS['constitution'])
+    else:
+        print(f'未知命令: {cmd}')
+        show_help()
+        sys.exit(1)

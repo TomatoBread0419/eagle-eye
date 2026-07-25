@@ -1,0 +1,205 @@
+# 市场事件监控报告 — 2026-05-27
+
+## 一、半导体/AI板块 (NVDA, TSM, QCOM, AMAT)
+
+### 英文源 (Google News RSS)
+1. **"NVDA Gains 23.5% Since April, TSM Up 19.7%: What's Driving the Rally?"** — TradingView | 2026-05-19
+2. **"Bernstein Analyst: AI Agents Drive Chip Demand 'Off the Charts,' Supply Can't Keep Up"** — 24/7 Wall St. | 2026-04-10
+3. **"Will AI-Driven Chip Demand Help TSM Meet 2026 Revenue Growth Goal?"** — Zacks | 2026-01-15
+4. **"NVIDIA vs TSMC vs Broadcom: Which AI Chip Stock Looks Best in 2026?"** — Gotrade | 2026-04-12
+
+### 中文源 (搜狗微信)
+- **"美股全线强势反弹!AI芯片狂飙领涨,英伟达炸裂财报引爆市场情绪!"** — 2026年内
+
+### 影响方向：🟢 利好（AI芯片需求爆发，但注意估值已高）
+### 交叉验证：英文源Bernstein + TradingView + Zacks三源确认需求爆发
+### ⚠️ 注意：NVDA自4月以来涨23.5%，TSM涨19.7% → 短线可能过热
+
+---
+
+## 二、地缘/台海风险 (TSM 重仓持仓者重点关注)
+
+### 英文源
+1. **"Taiwan Strait Tensions Push Countries to Diversify Semiconductor Supply Chains"** — thehilltoponline | 2026-05-14
+2. **"TSM: Taiwan's TSMC Faces Risks Amid Rising Tensions with China"** — GuruFocus | 2026-03-13
+3. **"Japan's Takaichi holds talks with TSMC chief amid tensions with China"** — Anadolu Ajansı | 2026-03-27
+4. **🔥"The $10 Trillion Fight: Modeling a US-China War Over Taiwan"** — Bloomberg | 2026-03-22
+
+### 影响方向：🔴 利空（台海风险长期存在，TSM为持仓中的地缘风险敞口）
+### 交叉验证：多源确认台海紧张持续，供应链分散化加速
+### 🚨 地缘预警：Bloomberg建模$10万亿代价的US-China War场景 — 尾部风险不可忽视
+
+---
+
+## 三、美联储政策 (Warsh新主席)
+
+### 英文源
+1. **🔥"Trump Picked Warsh to Cut Rates. Markets Are Bracing for the Opposite."** — WSJ | 2026-05-26
+2. **"New Fed Chair Kevin Warsh suggests he may take an Alan Greenspan-style approach"** — Yahoo Finance | 2026-05-22
+3. **"Trump finally gets his Fed chair. Bond investors are already testing him."** — Politico | 2026-05-22
+
+### 影响方向：🟡 中性→🔴 偏空（市场预期与实际政策可能存在巨大落差）
+### 交叉验证：WSJ + Politico + Yahoo Finance三源一致
+### 🚨 突发信号：Trump提名Warsh降息 → 市场定价"相反走向"
+### 逻辑：Warsh采用格林斯潘式方法 = 独立性强，不受政治压力影响
+### → 若Warsh比预期鹰派，债券收益率上升，对GS/JPM等金融股影响需观察
+
+---
+
+## 四、贸易/Trump访华 (关税、协议)
+
+### 英文源
+1. **"The aftermath of Trump-Xi summit: comparing U.S. and China announcements"** — NPR | 2026-05-15
+2. **"President Trump's State Visit to China Delivers Historic Deals"** — USTR.gov | 2026-05-15
+3. **"In China summit, Trump touts 'fantastic trade deals' with Xi"** — CBS News | 2026-05-15
+
+### 影响方向：🟡 中性（协议细节模糊，双方表述存在显著差异）
+### 交叉验证：NPR + USTR + CBS News三方报道，但协议内容缺乏具体数字
+### 结论：实质利好有限，不宜对贸易和解过高期待
+
+---
+
+## 五、原材料/稀土/钨 (AMAT/LAM等半导体设备商成本端)
+
+### 英文源
+1. **🔥"Skyrocketing tungsten prices bruise U.S. manufacturers"** — marketplace.org | 2026-05-25
+2. **🔥"Tungsten prices surge nearly 6x amid China export controls and geopolitical tensions"** — digitimes | 2026-05-21
+3. **"Tungsten's Quiet Shock: The Metal at the Center of a New Supply Chain War"** — Rare Earth Exchanges | 2026-05-01
+4. **"'Our time is now': Vietnam tungsten firm rides high on Chinese export curbs"** — Nikkei Asia | 2025-12-30
+
+### 影响方向：🔴 利空美国半导体设备商 (AMAT, LAM, Applied Materials)
+### 交叉验证：marketplace + digitimes + Rare Earth Exchanges + Nikkei四源确认
+### 🚨 突发信号：钨价暴涨6倍！中国出口管制是主因
+### 逻辑链：
+   - 钨是半导体CVD/ PVD设备的靶材关键材料
+   - AMAT/LAM中国业务占比高 → 直接承压
+   - 但AMAT是TSM先进制程供应商 → TSM成本上升 → 长期或传导至芯片涨价
+   - 越南钨供应商受益 → 供应链分散化加速
+
+---
+
+## 六、特斯拉FSD入华 (TSLA相关)
+
+### 中文源 (搜狗微信)
+1. **"特斯拉FSD入华,对谁是最大的利好?"**
+2. **"特斯拉FSD入华——智驾终局之战的'狼来了'还是'鲶鱼效应'?"**
+3. **"特斯拉FSD终于入华,却为何成了'半成品'?"**
+
+### 影响方向：🟡 中性（竞争加剧，但FSD体验被指"半成品"，国内车企或迎追赶窗口）
+### 交叉验证：多篇文章交叉，FSD入华已确认但体验存疑
+### 对TSLA影响：短期竞争压力，不改变自动驾驶赛道长期逻辑
+
+---
+
+## 七、国内货币/降准降息 (A股/消费板块)
+
+### 中文源
+1. **"中国人民银行行长潘功胜:灵活高效运用降准降息等多种货币政策工具"**
+2. **"央行重磅定调2026!降准降息将灵活落地,影响你我钱袋子、企业发展的关键信号全解读"**
+3. **"央行将降准降息,2026年是否会启动房地产修复行情?"**
+
+### 影响方向：🟢 利好 (消费、房地产、银行板块)
+### 交叉验证：三源一致，PBOC 2026年货币政策宽松信号明确
+### 对WMT/COST等消费股：降息→居民消费能力边际改善→利好消费板块
+
+---
+
+## 八、外资流入A股
+
+### 中文源（历史数据，仅作背景参考）
+- 过往外资看好A股持续修复，板块轮动消费股获关注（数据较旧）
+
+---
+
+# 持仓影响评估
+
+## 当前持仓状态（来自us_signal_latest.json）
+| 标的 | 价格 | RSI | 趋势 | 状态 |
+|------|------|-----|------|------|
+| AAPL | $308.33 | 87.4 | 上涨 | 🔴 超买 |
+| WMT | $118.59 | 28.2 | 下跌 | 🟢 超卖+触布林下轨 |
+| PEP | $145.66 | 30.3 | 下跌 | 🟢 超卖 |
+| QCOM | $248.74 | 69.6 | 上涨 | 🟢 突破布林上轨 |
+| GS | $994.87 | 70.5 | 上涨 | 🟡 接近超买 |
+| NVDA | — | — | — | 自峰值$234.88回落 |
+| TSM | — | — | — | 自峰值$415.1回落 |
+
+## 具体影响
+
+### 🔴 AAPL (持仓) — RSI 87.4 超买警报
+- 当前位置：$308.33，接近布林上轨$315.46
+- 建议：考虑减仓50%，保留利润；若持有至RSI回落至70以下再考虑加回
+- 风险：AI芯片需求爆发理论上利好AAPL（AI服务器），但钨价暴涨6倍→成本压力
+
+### 🔴 TSM (持仓) — 台海地缘风险重仓持有
+- 自高位回撤：$415→当前不详（估计在高位区间）
+- 地缘风险：Bloomberg建模US-China War over Taiwan = 尾部风险
+- 建议：台海紧张升级时启动减仓预案；止损位建议收紧至成本价-8%
+- 利好：AI芯片需求旺盛；但供给侧风险盖过需求侧利好
+
+### 🟢 WMT (持仓) — RSI 28.2 超卖，强烈买入信号
+- 自高位$135.14回撤12.2%
+- 触布林下轨$120.8附近
+- 利好：国内降准降息→居民消费能力边际改善；WMT是消费防御股
+- 建议：可在$118-120区间加仓，目标RSI回升至50以上
+- 风险：零售板块整体承压，需确认 sales 数据的持续性
+
+### 🟢 PEP (持仓) — RSI 30.3 超卖
+- 自高位$159.95回撤8.9%
+- 建议：可少量补仓，但整体消费需求疲软需观察
+- 交叉利好：国内降息→对冲部分消费下行压力
+
+### 🟢 QCOM (持仓) — 突破布林上轨，均线多头
+- 自4月低点大幅反弹，AI芯片需求外溢到手机/IoT芯片
+- 建议：持有，止损上移至$235（布林中轨$199.86上方）
+- 风险：钨价暴涨对QCOM影响相对间接（封装用材料），但需关注
+
+### 🔴 AMAT (持仓) — 钨价暴涨6倍直接受害者
+- AMAT是半导体CVD/PVD设备龙头，钨靶材是核心耗材
+- 中国出口管制+钨价暴涨 = 直接成本冲击
+- 建议：地缘风险+原材料涨价双重压力下，AMAT应减仓或止损
+- 供应链重构逻辑：长期利好非中国设备供应商（Lam Research等）
+
+### 🟢 GS (持仓) — 受益于Fed政策，但Warsh带来不确定性
+- 金融股中GS排名靠前（score 16.7）
+- 若Warsh超预期鹰派 → 债券收益率上升 → GS固收业务受益
+- 若Warsh不及预期鸽派 → 股市承压 → GS投行业务受损
+- 建议：中性偏谨慎持有，关注10年期美债收益率突破4.5%的信号
+
+---
+
+# 买入机会推荐
+
+## 🟢 QCOM — 独立判断逻辑
+**触发条件**：AI芯片需求从数据中心扩散到边缘端（手机、汽车、IoT）
+**为什么**：QCOM凭借Snapdragon在AI手机/PC市场有增量；均线多头排列确认
+**入场区间**：$245-250（回踩布林上轨支撑）
+**目标**：前高$257.97突破后看$270
+**止损**：$220（布林中轨$199.86下方）
+**风险收益比**：约1:3
+
+## 🟢 WMT — 超卖反弹机会
+**触发条件**：消费防御属性 + RSI 28.2 极端超卖
+**为什么**：WMT是必选消费抗跌品种；国内降息利好消费板块情绪传导
+**入场区间**：$117-119（布林下轨支撑确认）
+**目标**：MA20 $129.16
+**止损**：$112（前低$111附近）
+**风险收益比**：约1:2.5
+
+---
+
+# 风险预警汇总
+
+| 优先级 | 事件 | 影响标的 | 方向 |
+|--------|------|----------|------|
+| 🚨 高 | 钨价暴涨6倍，中国出口管制 | AMAT, LAM | 🔴 |
+| 🚨 高 | 台海地缘风险（Bloomberg $10T建模） | TSM | 🔴 |
+| 🚨 高 | Warsh Fed政策不确定性 | GS, JPM, 整体市场 | 🔴 |
+| ⚠️ 中 | NVDA/TSM短线过热 | NVDA, TSM | 🟡 |
+| ⚠️ 中 | AAPL RSI 87.4超买 | AAPL | 🔴 |
+| 🟡 低 | Trump访华协议空洞 | 整体贸易 | 中性 |
+
+---
+
+报告生成时间：2026-05-27
+数据来源：Google News RSS + 搜狗微信
