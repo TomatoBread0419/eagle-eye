@@ -1,0 +1,15 @@
+*.db
+*.log
+.env
+__pycache__/
+*.pyc
+venv/
+node_modules/
+*.gz
+*.pkl
+*.pyo
+circuit_breaker_state.json
+*.backup
+*.bak
+.codebuddy/
+.cursor/
