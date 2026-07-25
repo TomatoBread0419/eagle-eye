@@ -25,7 +25,7 @@
 **修复**：
 1. 直接调用 Alpaca API 时使用 `timeout=30`（不是默认 15s）
 2. 安装 `dns-hijack-fix` skill 的 `sitecustomize.py`，自动重解析到真实 IP
-3. 临时：在 `/data/data/com.termux/files/usr/etc/hosts` 添加 Alpaca 真实 IP
+3. 临时：在 `$PREFIX/etc/hosts` 添加 Alpaca 真实 IP
 
 ## 影响
 

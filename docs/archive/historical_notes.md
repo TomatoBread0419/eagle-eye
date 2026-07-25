@@ -1696,7 +1696,7 @@ python3 ~/.hermes/scripts/us_trader.py --execute '{"orders": [{"symbol": "AMAT",
 **修复**：
 1. **增加超时**：直接调用 Alpaca API 时使用 `timeout=30`（不是默认 15s）
 2. **安装 sitecustomize.py**：按 `dns-hijack-fix` skill 安装 Python DoH 修复，自动重解析到真实 IP
-3. **hosts 文件 pin**：在 `/data/data/com.termux/files/usr/etc/hosts` 添加 `198.18.0.24 paper-api.alpaca.markets`
+3. **hosts 文件 pin**：在 `$PREFIX/etc/hosts` 添加 `198.18.0.24 paper-api.alpaca.markets`
    - 2026-06-08 验证：`198.18.0.24` 对 Alpaca TLS 握手成功（TLSv1.3），API 返回正确 200
    - 注意：`198.18.0.25` 和 `198.18.0.37` 的 TLS 失败，不要用
 
