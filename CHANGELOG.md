@@ -1,5 +1,13 @@
 # 更新日志
 
+## [v7.2.1] - 2026-08-01
+
+### Type
+Feature
+
+### Summary
+Eagle Eye v7.2.1 首个正式 Release（BL-001）。V7.2 动态池系统 + Config V2 分层 + HTTP curl 降级 + 事件驱动双轨，clean history 基线。
+
 ## v7.2.0 — 2026-07-20
 
 ### ✨ 新功能
