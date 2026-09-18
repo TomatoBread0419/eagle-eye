@@ -357,7 +357,7 @@ def main(mode='normal'):
         for h in holdings:
             sec = get_sector(h['symbol']); d = sh.setdefault(sec, {'c':0,'v':0,'p':0})
             d['c']+=1; d['v']+=h['market']; d['p']+=h['pnl']
-        print(f'  板块分布: {", ".join(f"{k}{v["c"]}只${v["v"]:,.0f}" for k,v in sorted(sh.items()))}')
+        print('  板块分布: ' + ', '.join(f"{k}{v['c']}只${v['v']:,.0f}" for k,v in sorted(sh.items())))
         print()
         for h in holdings:
             sym = h['symbol']; si = existing_stops.get(sym)
