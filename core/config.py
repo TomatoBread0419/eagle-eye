@@ -191,7 +191,15 @@ class Config:
 
     def __init__(self):
         self._root = _find_project_root()
-        self._env_file = self._root / '.env'
+        # .env 解析：优先 legacy 项目根/.env（Termux 布局），回退拍平后的
+        # 数据目录/.env（当前 Windows 布局）与 home 别名；取第一个存在的候选。
+        # root 本身保持 _find_project_root() 语义不变（data_dir/db_path 依赖它）。
+        candidates = (
+            self._root / '.env',                    # legacy/Termux: 项目根/.env
+            self._root / 'stock_trader' / '.env',   # Windows 布局: 数据目录/.env
+            Path.home() / 'stock_trader' / '.env',  # home 别名兜底
+        )
+        self._env_file = next((p for p in candidates if p.exists()), candidates[0])
         self._env_data = _load_env_file(self._env_file)
         self._weight_config = None
 
