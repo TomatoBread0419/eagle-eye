@@ -98,9 +98,16 @@ def _freshness(ts_dt, intraday_min=None, post_hours=None, now=None):
 
 
 def _load_env():
-    """从 ~/.hermes/.env → ~/.env → 脚本同目录 .env 加载密钥 (血训 2026-07-20)。"""
+    """从候选 .env 逐个加载密钥 (血训 2026-07-20); 找齐 ALPACA 双键才停。
+
+    2026-09-20 修复: 原命中首个存在的 .env 即 return —— 迁移后 ~/.hermes/.env
+    存在但无 ALPACA 键, 真实凭证(~/stock_trader/.env)永远读不到, 导致 account
+    输入恒 missing (shadow 记录恒 ACCOUNT_UNAVAILABLE)。现改为找齐双键才停;
+    候选耗尽仍缺键 → 维持 "no alpaca keys" 异常 (fail-closed 不变)。
+    """
     for p in [os.path.expanduser("~/.hermes/.env"),
               os.path.expanduser("~/.env"),
+              os.path.join(BASE_DIR, ".env"),
               os.path.join(os.path.dirname(os.path.abspath(__file__)), ".env")]:
         if os.path.isfile(p):
             try:
@@ -114,7 +121,10 @@ def _load_env():
                                 os.environ.setdefault(k, v)
             except Exception:
                 pass
-            return
+            if (os.environ.get("ALPACA_API_KEY") or os.environ.get("APCA_API_KEY")) and (
+                os.environ.get("ALPACA_SECRET_KEY") or os.environ.get("APCA_SECRET_KEY")
+            ):
+                return
 
 
 def _default_account_getter():
