@@ -106,9 +106,26 @@ def execute_take_profit(results, holdings, state, sold_this_cycle=None):
         else:
             sell_qty = qty
 
-        # 先取消已有止损单（否则Alpaca因份额被冻结拒绝市价单）
+        # P2-20261013: 止损替换最小变动阈值 — 剩余量与原止损单 qty 一致，
+        # 且 |新止损价-原止损价|/原价 < 0.3% → 保留原止损单，跳过 cancel+re-place。
+        # 保护性卖出(remaining=0)、qty 不一致、价差超阈、任一异常 → 一律走原路径
+        # （绝不裸奔：不满足全部条件时保持原有撤挂行为）。
+        remaining = qty - sell_qty
         stop_order = existing_stops.get(sym)
-        if stop_order:
+        keep_stop = False
+        if stop_order and remaining > 0:
+            try:
+                _osp = float(stop_order.get('stop_price') or 0)
+                _oq = float(stop_order.get('qty') or 0)
+                if _osp > 0 and abs(_oq - remaining) <= 0.01:
+                    _new = get_trail_stop(sym, state, holding['avg'], vol_20d=r.get('vol_20d'))
+                    if _new and abs(float(_new) - _osp) / _osp < 0.003:
+                        keep_stop = True
+            except Exception:
+                keep_stop = False
+
+        # 先取消已有止损单（否则Alpaca因份额被冻结拒绝市价单）
+        if stop_order and not keep_stop:
             cancel_order(stop_order['id'])
             time.sleep(0.3)
 
@@ -118,13 +135,13 @@ def execute_take_profit(results, holdings, state, sold_this_cycle=None):
             msgs.append(
                 f'  💰 止盈卖出 {sym} x{sell_qty} @ ${r["price"]} '
                 f'| 原因: {r["sell_reason"]}'
+                + (' ⏸止损未变保留' if keep_stop else '')
             )
             sold_this_cycle[sym] = sold_this_cycle.get(sym, 0) + sell_qty
             _log_sell_for_replacement(sym, 'take_profit', sell_qty, r['price'])  # P14
 
-            # 卖完后如果还有剩余，重新挂止损
-            remaining = qty - sell_qty
-            if remaining > 0:
+            # 卖完后如果还有剩余，重新挂止损（阈值命中保留原单时不重挂）
+            if remaining > 0 and not keep_stop:
                 cost = holding['avg']
                 # v4.6: 传入波动率，避免回退到默认 8%
                 sym_vol = r.get('vol_20d')
