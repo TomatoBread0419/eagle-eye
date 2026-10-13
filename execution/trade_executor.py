@@ -38,6 +38,10 @@ from eagle_eye.core.logger import get_logger
 logger = get_logger('execution')
 set_replacement_logger(log_sell_for_replacement); set_tp_repl(log_sell_for_replacement)
 
+# Governor Stage 0 (record-only): shadow 审计重定向到隔离台账。
+# setdefault — harness/外部同名环境变量可覆盖；不设 SHADOW_MODE，零阻断。
+os.environ.setdefault('SHADOW_AUDIT_FILE', 'D:/Hermes/audit_live/governor_stage0/shadow_decisions.jsonl')
+
 # ═══ Paths & risk params (unchanged from V6) ═══
 DATA_DIR = str(cfg.data_dir)
 WATCHLIST_FILE, EVENTS_FILE = f'{DATA_DIR}/us_watchlist.json', f'{DATA_DIR}/market_events_latest.json'
@@ -129,7 +133,7 @@ def check_account_risk(equity, cash, state, holdings, sold_this_cycle=None):
             qty = int(h['qty']) - sold_this_cycle.get(h['symbol'], 0)
             if qty > 0:
                 # [execution_intent_type=risk_exit] 回撤>20% 强制减半仓 — Governor 不得阻断
-                order = place_market_order(h['symbol'], max(1, qty // 2), 'sell')
+                order = place_market_order(h['symbol'], max(1, qty // 2), 'sell', shadow_intent_type='risk_exit')
                 if order:
                     sold_this_cycle[h['symbol']] = sold_this_cycle.get(h['symbol'], 0) + max(1, qty // 2)
                     cuts.append(f'  减仓 {h["symbol"]} x{max(1,qty//2)} @ ${h["current"]}')
@@ -221,13 +225,24 @@ def main(mode='normal'):
         check_position_utilization(equity, cash, holdings, mode=mode)
 
     buy_msgs = []; hold_syms = {h['symbol'] for h in holdings} | just_sold
+    open_stop_syms = set()
     if can_buy and not _block_buys():
+        # P1-20261013 wash-403 抑制: 买单一律避开在挂 sell-stop 标的。
+        # 新鲜查询置于 trail/TP 之后（本周期一次, 非逐单 GET）: 避免用 L195 旧快照
+        # 误拦本周期刚撤停的配对回买; 查询失败 → 空集 fail-open(行为同今日)。
+        try:
+            open_stop_syms = set(get_open_stop_orders().keys())
+        except Exception:
+            open_stop_syms = set()
+
         # 6a. Event-driven buys
         for ss, sp, reason, priority in event_signals:
             if ss in hold_syms: continue
             if priority == 'critical' and cash >= sp * 2:
                 qty = max(2, min(5, int(cash * 0.05 // max(sp, 1))))
-                order = place_market_order(ss, qty, 'buy')
+                if ss in open_stop_syms:
+                    print(f'  ⏭ P1 skip buy {ss}: open sell-stop'); continue
+                order = place_market_order(ss, qty, 'buy', shadow_intent_type='strategy_entry')
                 if order and order.get('id'):
                     buy_msgs.append(f'  🔥 事件买入 {ss} x{qty} @ ~${sp:.2f} | {reason[:60]}')
                     cash -= sp * qty; hold_syms.add(ss)
@@ -249,7 +264,9 @@ def main(mode='normal'):
                     if qty < 1: qty = 1
                     if qty * mp > cash * MAX_SINGLE_PCT_OF_CASH:
                         qty = max(1, min(int((cash * MAX_SINGLE_PCT_OF_CASH) // max(mp, 1)), MAX_PAIR_QTY_PER_SYMBOL))
-                    order = place_market_order(sym, qty, 'buy')
+                    if sym in open_stop_syms:
+                        print(f'  ⏭ P1 skip buy {sym}: open sell-stop'); continue
+                    order = place_market_order(sym, qty, 'buy', shadow_intent_type='strategy_entry')
                     if order and order.get('id'):
                         buy_msgs.append(f'  🔄 sell→buy 配对 {sym} x{qty} @ ~${mp:.2f}')
                         cash -= mp * qty; budget -= mp * qty; done += 1
@@ -263,11 +280,13 @@ def main(mode='normal'):
             if r['buy_score'] >= 3 and cash >= r['price'] * 2:
                 held = next((h for h in holdings if h['symbol'] == sym), None)
                 if held:
+                    if sym in open_stop_syms:
+                        print(f'  ⏭ P1 skip buy {sym}: open sell-stop'); continue
                     qty = max(1, min(3, int(held['qty'] * 0.5)))
                     max_d = cash * MAX_SINGLE_PCT_OF_CASH
                     qty = min(qty, int(max_d // max(r['price'], 1)), MAX_ADD_QTY_PER_SYMBOL)
                     if qty < 1: continue
-                    order = place_market_order(sym, qty, 'buy')
+                    order = place_market_order(sym, qty, 'buy', shadow_intent_type='strategy_entry')
                     if order and order.get('id'):
                         buy_msgs.append(f'  📗 加仓 {sym} x{qty} @ ${r["price"]:.2f} | 得分{r["buy_score"]}')
                         cash -= r['price'] * qty
@@ -290,6 +309,8 @@ def main(mode='normal'):
                     buy_msgs.append(f'  🔴 硬约束失败：候选池空')
                 else:
                     for pick in pool[:3]:
+                        if pick in open_stop_syms:
+                            print(f'  ⏭ P1 skip buy {pick}: open sell-stop'); continue
                         live_rsi = None
                         try:
                             bars = __get_daily_bars(pick)
@@ -304,7 +325,8 @@ def main(mode='normal'):
                         if qty < 1: continue
                         # [execution_intent_type=strategy_entry] GARP 低利用率强制买入 (limit 保持原语义)
                         order = place_limit_order(pick, qty, 'buy', lp, dedupe=True,
-                                                  client_order_id=f'hardutil_{int(time.time())}')
+                                                  client_order_id=f'hardutil_{int(time.time())}',
+                                                  shadow_intent_type='strategy_entry')
                         if order and order.get('id'):
                             buy_msgs.append(f'  🔧 硬约束 buy {pick} x{qty} limit ${lp}')
                             hard_done = True; break
@@ -329,12 +351,14 @@ def main(mode='normal'):
                     r = analyze(sym)
                     th = get_buy_threshold(utilization, event_signals, sym)
                     if r and r.get('buy_score', 0) >= th:
+                        if sym in open_stop_syms:
+                            print(f'  ⏭ P1 skip buy {sym}: open sell-stop'); continue
                         if r.get('rsi') and r['rsi'] >= 75:
                             screener_msgs.append(f'  ⏭ {sym} RSI{r["rsi"]}过热，跳过'); continue
                         mp = __get_us_price(sym) or r['price']
                         qty = max(2, min(5, int(cash * 0.05 // max(mp, 1)))) if need_buy else max(1, min(3, int(cash * 0.02 // max(mp, 1))))
                         if qty > 0:
-                            order = place_market_order(sym, qty, 'buy')
+                            order = place_market_order(sym, qty, 'buy', shadow_intent_type='strategy_entry')
                             if order and order.get('id'):
                                 screener_msgs.append(f'  📗 买入 {sym} x{qty} @ ${mp:.2f} | 得分{r["buy_score"]}')
                                 cash -= mp * qty; bought += 1
