@@ -183,9 +183,11 @@ def check_seed_eligibility(
     if _has_contradictory_signals({'signals': signals, 'rsi': rsi}):
         return False, 'Contradictory signals detected (death cross + volume spike or death cross with RSI < 45)'
 
-    # 5. Kelly ≤ 8%?
+    # 5. Kelly ≤ 8%? — [SUPERSEDED 2026-10-19] kelly 数据被审计证伪，降级为信息性记录，不再决定新仓资格。
+    # 依据：perf_retro_20261019（美元 FIFO 重算真凯利 −4.24%、自报 matched_trades=325 无逐笔明细不可审计）。
+    # 固定风险约束不变：size ≤ 5%（订单创建时）、check_exposure 敞口上限、RSI/gap/信号一致性判定全部保留。
     if kelly_pct is not None and kelly_pct > SEED_MAX_KELLY * 100:
-        return False, f'Kelly={kelly_pct:.1f}% > {SEED_MAX_KELLY*100:.0f}% seed max'
+        get_logger(__name__).info(f'[KELLY-ADVISORY-ONLY] {symbol}: Kelly={kelly_pct:.1f}% > {SEED_MAX_KELLY*100:.0f}%（仅记录，不再拒绝）')
 
     # 6. Size ≤ 5%?
     # (checked at order creation — this validator confirms eligibility)

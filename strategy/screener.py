@@ -435,9 +435,10 @@ def run_scan(mode='normal'):
         'top10': [r['symbol'] for r in results[:10]],
         'all_ranked': [{'symbol': r['symbol'], 'score': r['momentum_score'],
                         'price': r['price'], 'sector': r['sector']} for r in results[:20]],
-        'kelly_allocations': {sym: {'kelly_pct': v['kelly_pct'], 'win_prob': v.get('p_est', 0),
-                                     'odds': v.get('b_est', 0), 'score': v['score']}
-                              for sym, v in kelly_map.items()},
+        # [KELLY-ISOLATION 2026-10-19] kelly 建议不再进入决策面：输出置空，kelly_map 计算保留作观察。
+        # 依据：perf_retro_20261019 半年审计——台账自报『正期望/半凯利』被美元 FIFO 重算证伪（真凯利 −4.24%）。
+        'kelly_allocations': {},
+        'kelly_status': 'disabled_audit_20261019',
         'critical_alerts': critical_alerts,
     }
     with open(WATCHLIST_FILE, 'w') as f:

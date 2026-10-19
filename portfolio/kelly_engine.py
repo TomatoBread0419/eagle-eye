@@ -211,9 +211,11 @@ def calc_kelly(trades):
         'kelly_full_pct': round(kelly_full * 100, 1),
         'kelly_half_pct': round(kelly_half * 100, 1),
         'recommendation': (
+            '[SUPERSEDED 2026-10-19｜观察记录，禁止作为仓位依据] ' + (
             '正期望，按半凯利执行' if kelly_half > 0.05 else
             '正期望但边缘，保守执行' if kelly_half > 0.02 else
             '无正期望或数据不足，暂停激进'
+            )
         ),
         'symbol_breakdown': {
             sym: {
