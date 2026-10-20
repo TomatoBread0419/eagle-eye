@@ -200,6 +200,25 @@ def _shadow_hook(symbol, qty, side, intent_type, order_result):
         pass
 
 
+def _l3_gate(symbol, qty, side, intent_type, caller):
+    """Governor L3 出口守卫钩子（下单前 BUY 检查）— 返回 True=拦截。
+
+    委托 governor_gate.pre_order_check（三态 off|shadow|enforce，默认 off）。
+    覆盖口径: 仅 side=='buy'；SELL/止损/止盈/退出零评估零日志。
+    失败模式: 任何异常 fail-open 返回 False——守卫自身故障绝不阻断下单。
+    """
+    try:
+        try:
+            from eagle_eye.execution.governor_gate import pre_order_check
+        except ImportError:
+            from governor_gate import pre_order_check
+        return bool(pre_order_check(symbol, qty, side,
+                                    intent_type=intent_type,
+                                    caller=caller).get('blocked'))
+    except Exception:
+        return False
+
+
 def place_market_order(symbol: str, qty: int, side: str, dedupe: bool = True,
                        shadow_intent_type: Optional[str] = None) -> Optional[dict]:
     """下单，默认去重：同一symbol已有未成交买单时跳过
@@ -236,6 +255,9 @@ def place_market_order(symbol: str, qty: int, side: str, dedupe: bool = True,
                 logger.info(f'  ⏭ {symbol} 已有未成交卖单，跳过（P2 防重复卖出）')
                 _shadow_hook(symbol, qty, side, shadow_intent_type, None)
                 return None
+    # [L3 governor gate] BUY 开仓前守卫（三态默认 off；仅 side=buy 评估；异常 fail-open）
+    if side == 'buy' and _l3_gate(symbol, qty, side, shadow_intent_type, 'place_market_order'):
+        return None
     client = get_alpaca_client()
     # [execution_intent_type=由调用方标注] 市价单唯一执行口 — 唯一 BUY/SELL 入口 (v1.1 §1.1)
     result = client.place_order(
@@ -362,6 +384,9 @@ def place_limit_order(symbol: str, qty: int, side: str, limit_price: float,
     )
     if client_order_id:
         kwargs['client_order_id'] = client_order_id
+    # [L3 governor gate] BUY 开仓前守卫（三态默认 off；仅 side=buy 评估；异常 fail-open）
+    if side == 'buy' and _l3_gate(symbol, qty, side, shadow_intent_type, 'place_limit_order'):
+        return None
     client = get_alpaca_client()
     result = client.place_order(**kwargs)
     _shadow_hook(symbol, qty, side, shadow_intent_type, result)
