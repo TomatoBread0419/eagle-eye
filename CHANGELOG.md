@@ -82,7 +82,7 @@ Eagle Eye v7.2.1 首个正式 Release（BL-001）。V7.2 动态池系统 + Confi
 
 ### ✨ 新功能
 
-- 多 Agent 协作架构（扫描 → 决策 → 风控 → 执行 → 审计）
+- 模块化流水线架构（扫描 → 决策 → 风控 → 执行 → 审计）
 - Alpaca Paper Trading API 集成
 - 提示词工程体系（四层结构）
 - 结构化通信（JSON Schema 契约）
