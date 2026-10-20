@@ -12,7 +12,7 @@
 flowchart TB
     subgraph DESIGN["DESIGN 应然设计 - docs/ARCHITECTURE.md (V7.1, Termux 时代)"]
         D1["GARP 动量扫描"]
-        D2["AI 决策 MoA"]
+        D2["AI 辅助决策"]
         D3["事件驱动链"]
         D4["内部 scheduler 模块"]
     end

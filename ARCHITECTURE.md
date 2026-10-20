@@ -8,7 +8,7 @@
 
 Eagle Eye 是一套运行在 Android/Termux 上的**美股智能交易系统**，采用双轨架构：
 - **GARP 执行器**（每 20 分钟）— 基于估值筛选自动调仓
-- **AI 决策器**（每 4 小时）— 基于 LLM（mimo-v2.5-pro）的 MoA 决策聚合
+- **AI 辅助决策**（每 4 小时）— 由外部 AI Agent（Hermes）评估，产出结构化决策 JSON；仓库内为数据装配与规则校验
 - **事件驱动链**（每 2 小时）— 新闻扫描→信号评估→执行
 
 技术栈：Python 3.14 + SQLite + Alpaca Paper Trading API + Hermes Agent Cron
@@ -88,7 +88,7 @@ Eagle Eye 是一套运行在 Android/Termux 上的**美股智能交易系统**�
 │   │   ├── shadow_mode.py                      #   影子模式（只算不执行）
 │   │   └── behavior_fingerprint.py             #   行为指纹（防漂移）
 │   │
-│   ├── ai/                                     # 🤖 AI 模块（预留，当前由 MoA 外部驱动）
+│   ├── ai/                                     # 🤖 AI 模块（预留，决策由外部 Agent 驱动）
 │   ├── events/                                 # 📰 事件模块（预留，当前由 stock_trader/tools/ 驱动）
 │   ├── monitoring/                             # 📈 监控模块（预留）
 │   ├── scheduler/                              # ⏰ 调度模块（预留）
@@ -125,7 +125,7 @@ Eagle Eye 是一套运行在 Android/Termux 上的**美股智能交易系统**�
 │   │
 │   ├── v7_scan.py                              #   V7 扫描入口 → 调用 eagle_eye.strategy
 │   ├── v7_portfolio.py                         #   V7 组合入口 → 调用 eagle_eye.portfolio
-│   ├── moa_decision.py                         #   🧠 MoA 决策聚合器（多模型投票）
+│   ├── moa_decision.py                         #   🧠 决策装配器（读扫描/持仓/事件 → 决策 JSON）
 │   ├── scan_market_events.py                   #   市场事件扫描（Google News RSS + 搜狗微信）
 │   ├── run_google_searches.py                  #   Google 搜索封装
 │   ├── cn_auto_trader.py                       #   A 股自动交易（东方财富数据源）
@@ -271,6 +271,8 @@ Eagle Eye 是一套运行在 Android/Termux 上的**美股智能交易系统**�
 └─────────────────────────────────────────────────────────────────┘
 ```
 
+> 图中「MoA AI 决策器 / 多模型投票」为历史命名：该模块本身不调用任何模型，仅装配外部 Agent 的决策结果。
+
 ---
 
 ## 四、CLI 命令映射
@@ -285,7 +287,7 @@ Eagle Eye 是一套运行在 Android/Termux 上的**美股智能交易系统**�
 | `trader` | 执行交易 | `~/.hermes/scripts/us_trader.py` |
 | `calibrate` | 参数自校准 | `~/.hermes/scripts/calibrator.py` |
 | `audit` | 合规审计 | `~/.hermes/scripts/compliance_audit.py` |
-| `moa` | MoA 决策 | `~/stock_trader/moa_decision.py` |
+| `moa` | 决策装配 | `~/stock_trader/moa_decision.py` |
 | `constitution` | 系统宪章 | `~/eagle_eye/ops/constitution.py` |
 | `execute` | 执行订单 (stdin JSON) | 内置处理 |
 
@@ -328,7 +330,7 @@ Eagle Eye 是一套运行在 Android/Termux 上的**美股智能交易系统**�
 - **网络**: 中国（需代理访问 Alpaca/Google）
 
 ### 6.2 Cron 任务
-- **AI 决策** (`a638e8d39d5d`): 每 4 小时，MoA 多模型决策
+- **AI 辅助决策** (`a638e8d39d5d`): 每 4 小时，外部 Agent（Hermes）单模型决策
 - **日报** (`b735145148c4`): 每日生成持仓报告
 - **GARP 执行器** (`eaa04a4d262d`): 每 20 分钟估值调仓
 - **事件驱动链**: market_events → fetcher → executor（每 2 小时）
@@ -369,6 +371,6 @@ Eagle Eye 是一套运行在 Android/Termux 上的**美股智能交易系统**�
 | 运维 | `ops/watchdog` | 看门狗 |
 | 运维 | `ops/emergency_stop` | 紧急停止 |
 | 工具 | `tools/pool_builder` | 动态池构建 |
-| 运行时 | `moa_decision` | MoA 多模型决策聚合 |
+| 运行时 | `moa_decision` | 决策装配（读扫描/持仓/事件 → 决策 JSON） |
 | 运行时 | `scan_market_events` | 市场事件扫描 |
 | 运行时 | `cn_auto_trader` | A 股自动交易 |
