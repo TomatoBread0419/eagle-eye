@@ -256,7 +256,7 @@ def place_market_order(symbol: str, qty: int, side: str, dedupe: bool = True,
                 _shadow_hook(symbol, qty, side, shadow_intent_type, None)
                 return None
     # [L3 governor gate] BUY 开仓前守卫（三态默认 off；仅 side=buy 评估；异常 fail-open）
-    if side == 'buy' and _l3_gate(symbol, qty, side, shadow_intent_type, 'place_market_order'):
+    if (side or '').lower() == 'buy' and _l3_gate(symbol, qty, side, shadow_intent_type, 'place_market_order'):
         return None
     client = get_alpaca_client()
     # [execution_intent_type=由调用方标注] 市价单唯一执行口 — 唯一 BUY/SELL 入口 (v1.1 §1.1)
@@ -385,7 +385,7 @@ def place_limit_order(symbol: str, qty: int, side: str, limit_price: float,
     if client_order_id:
         kwargs['client_order_id'] = client_order_id
     # [L3 governor gate] BUY 开仓前守卫（三态默认 off；仅 side=buy 评估；异常 fail-open）
-    if side == 'buy' and _l3_gate(symbol, qty, side, shadow_intent_type, 'place_limit_order'):
+    if (side or '').lower() == 'buy' and _l3_gate(symbol, qty, side, shadow_intent_type, 'place_limit_order'):
         return None
     client = get_alpaca_client()
     result = client.place_order(**kwargs)
